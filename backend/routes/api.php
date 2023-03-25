@@ -3,7 +3,11 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+<<<<<<< HEAD
 use App\Http\Controllers\CodeController;
+=======
+use App\Http\Controllers\UserController;
+>>>>>>> 9593ee8153af29e58e7fb5f43b49005f816fc5f0
 
 Route::group(["prefix" => "v0.0.0"], function(){
 
@@ -15,7 +19,9 @@ Route::group(["prefix" => "v0.0.0"], function(){
         Route::get('/codes/{name}',[CodeController:: class, "getSaved"]);
         Route::post('/saveCode',[CodeController:: class, "saveCode"]);
 
-    Route::group(["middleware" => ["auth:api"]], function(){
-        //Routes demanding verifications 
-    });
+        Route::group(["middleware" => ["auth:api"]], function(){
+            Route::post('/users', [UserController::class, 'getUsers']);
+            Route::get('/users/search', [UserController::class, 'search']);
+
+        });
 });

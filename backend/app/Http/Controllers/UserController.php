@@ -2,26 +2,37 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Models\User;
 
 class UserController extends Controller
 {
     public function getUsers()
     {
-        $gender=Auth::user()->gender;
-
-        if ($gender=='male'){
-            $oppsiteGender='female';
-        }
-        else {
-            $oppsiteGender = 'male';
-        }
-
-        $users = DB::table('app_users')->where('gender', $oppsiteGender)->get();
+        $users = DB::table('users')->get();
         return response()->json([
             'status' => 'success',
             'users' => $users
         ]);
     }
+    public function search(Request $request)
+{
+    $query = $request->input('q');
+    $users = User::where('username', 'like', "%$query%")
+                 ->orWhere('email', 'like', "%$query%")
+                 ->get();
+
+    if ($users->isEmpty()) {
+    return response()->json([
+        'status' => 'error',
+        'message' => 'No users found for the given search criteria'
+    ], 204);
+    }
+    
+    return response()->json([
+        'status' => 'success',
+        'users' => $users
+    ]);
+}
 }
