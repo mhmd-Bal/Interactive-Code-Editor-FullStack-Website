@@ -1,4 +1,5 @@
 import React from "react";
+import AppButton from "../../Button";
 import "./styles.css";
 
 const Search = () => {
@@ -9,6 +10,7 @@ const Search = () => {
         type="search"
         placeholder="Search for users"
       />
+      <AppButton button_name={<i class='fa-solid fa-magnifying-glass'></i>}/>
     </div>
   );
 };

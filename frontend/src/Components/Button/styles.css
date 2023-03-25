@@ -6,6 +6,7 @@ button{
     transition: 0.2s ease-in-out;
     cursor: pointer;
     font-weight: bold;
+    text-align: center;
 }
 
 button:hover{
