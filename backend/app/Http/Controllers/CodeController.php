@@ -7,15 +7,14 @@ use App\Models\Code;
 
 class CodeController extends Controller
 {
-    public function getSaved($name){
-        $code=Code::where('name',$name)->get();
+    public function getCodes($id){
+        $code=Code::where('id',$id)->get();
         return response()->json([
             'code'=> $code
         ]);
     }
 
-    public function saveCode(Request $request)
-    {
+    public function insertCode(Request $request){
         $name=$request->name;
         $content=$request->content;
         $user_id=$request->user_id;
@@ -36,7 +35,6 @@ class CodeController extends Controller
                 'status'=>'Name of the file is already picked, choose another one'
             ]);
         }
-
-       
     }
+
 }
