@@ -3,7 +3,7 @@ import "./styles.css";
 
 const Search = () => {
   return (
-    <div>
+    <div className="searchBar_block">
       <input
         className="searchBar"
         type="search"

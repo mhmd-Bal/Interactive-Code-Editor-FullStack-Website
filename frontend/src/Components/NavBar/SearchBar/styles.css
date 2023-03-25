@@ -7,9 +7,20 @@
 
 .searchBar {
   border-radius: 20px;
-  border: 1px solid rgb(151, 0, 154);
+  border: 2px solid var(--light_purple);
   display: flex;
   align-items: center;
+  width: 100%;
   outline: none;
   padding: 5px;
+  transition: 0.3s ;
+}
+
+.searchBar:focus{
+  border: 2px solid var(--primary_blue);
+  translate: 0px -2px;
+}
+
+.searchBar_block {
+  width: 40%;
 }
