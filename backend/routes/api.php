@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
 
 Route::group(["prefix" => "v0.0.0"], function(){
 
@@ -13,7 +14,7 @@ Route::group(["prefix" => "v0.0.0"], function(){
         Route::get('/me',[AuthController:: class, "me"]);
     
 
-    Route::group(["middleware" => ["auth:api"]], function(){
-        //Routes demanding verifications 
-    });
+        Route::group(["middleware" => ["auth:api"]], function(){
+            Route::post('/users', [UserController::class, 'getUsers']);
+        });
 });
