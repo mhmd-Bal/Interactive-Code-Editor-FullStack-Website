@@ -46,9 +46,20 @@ class CodeController extends Controller
             'code_id'=>$code_id,
             'user_id'=>$user_id,
         ]);
+        
         return response()->json([
             'status'=>'Saved'
         ]);
     }
 
+    public function getSavedCodes($id){
+        $favorites = Favorite::join("codes", "favorites.code_id", "=", "codes.id")
+                            ->join("users", "codes.user_id", "=", "users.id")
+                            ->select("favorites.*", "codes.name", "codes.content", "users.username", "users.profile_picture")
+                            ->where("favorites.user_id",$id)
+                            ->get();
+        return response()->json([
+            'favorites'=> $favorites
+        ]);
+    }
 }
