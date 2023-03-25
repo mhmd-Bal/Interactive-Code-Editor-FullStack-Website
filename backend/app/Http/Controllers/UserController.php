@@ -20,8 +20,15 @@ class UserController extends Controller
 {
     $query = $request->input('q');
     $users = User::where('username', 'like', "%$query%")
-                //  ->orWhere('email', 'like', "%$query%")
+                 ->orWhere('email', 'like', "%$query%")
                  ->get();
+
+    if ($users->isEmpty()) {
+    return response()->json([
+        'status' => 'error',
+        'message' => 'No users found for the given search criteria'
+    ], 204);
+    }
     
     return response()->json([
         'status' => 'success',
