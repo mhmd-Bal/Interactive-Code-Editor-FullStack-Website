@@ -18,7 +18,7 @@ class UserController extends Controller
     }
     public function search(Request $request)
 {
-    $query = $request->input('q');
+    $query = $request->input('search_input');
     $users = User::where('username', 'like', "%$query%")
                  ->orWhere('email', 'like', "%$query%")
                  ->get();

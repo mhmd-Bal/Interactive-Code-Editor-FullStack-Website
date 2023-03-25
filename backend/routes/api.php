@@ -17,14 +17,14 @@ Route::group(["prefix" => "v0.0.1"], function(){
         
         Route::group(["middleware" => ["auth:api"]], function(){
             
-            Route::post('/users', [UserController::class, 'getUsers']);
+            Route::get('/users', [UserController::class, 'getUsers']);
             Route::get('/users/search', [UserController::class, 'search']);
 
             Route::group(["prefix" => "code"], function(){
                 Route::post('/save',[CodeController:: class, "saveCode"]);
+                Route::post('/add',[CodeController:: class, "insertCode"]);
                 Route::get('/get_saved/{id}',[CodeController:: class, "getSavedCodes"]);
                 Route::get('/{id}',[CodeController:: class, "getCodes"]);
-                Route::post('/add',[CodeController:: class, "insertCode"]);
             });
         });
 });
