@@ -1,0 +1,26 @@
+.textBox {
+  background-color: rgb(199, 0, 57);
+  height: 15vh;
+  padding: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.submit {
+  background-color: rgb(255, 195, 15);
+  width: 5%;
+  height: 80%;
+  padding: 10px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  width: 70%;
+  height: 80%;
+  padding: 10px;
+  border-radius: 20px;
+}
