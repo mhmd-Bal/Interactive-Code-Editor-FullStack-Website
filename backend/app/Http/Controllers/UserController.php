@@ -10,14 +10,14 @@ class UserController extends Controller
 {
     public function getUsers()
     {
-        $users = DB::table('users')->get();
+        $users = DB::table('users')->where('is_admin', '=', 0)->get();
         return response()->json([
             'status' => 'success',
             'users' => $users
         ]);
     }
     public function search(Request $request)
-{
+    {
     $query = $request->input('search_input');
     $users = User::where('username', 'like', "%$query%")
                  ->orWhere('email', 'like', "%$query%")
