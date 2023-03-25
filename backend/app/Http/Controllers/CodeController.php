@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Code;
+use App\Models\Favorite;
+use Illuminate\Http\Request;
 
 class CodeController extends Controller
 {
@@ -35,6 +36,19 @@ class CodeController extends Controller
                 'status'=>'Name of the file is already picked, choose another one'
             ]);
         }
+    }
+
+    public function saveCode(Request $request){
+        $code_id=$request->code_id;
+        $user_id=$request->user_id;
+
+        $save=Favorite::create([
+            'code_id'=>$code_id,
+            'user_id'=>$user_id,
+        ]);
+        return response()->json([
+            'status'=>'Saved'
+        ]);
     }
 
 }
