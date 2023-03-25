@@ -1,0 +1,11 @@
+button{
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color: var(--light_purple);
+    color: white;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button:hover{
+    background-color: var(--redish_purple);
+}
