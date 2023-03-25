@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Routes, Route, Router } from "react-router-dom"
 import ChatBox from './Pages/ChatBox';
 import HomePage from './Pages/Home';
-import LoginPage from './Pages/Login';
+import LoginPage from './Pages/LoginPage';
 
 function App() {
 
