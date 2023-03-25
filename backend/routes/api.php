@@ -3,11 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
-<<<<<<< HEAD
 use App\Http\Controllers\CodeController;
-=======
 use App\Http\Controllers\UserController;
->>>>>>> 9593ee8153af29e58e7fb5f43b49005f816fc5f0
 
 Route::group(["prefix" => "v0.0.0"], function(){
 
