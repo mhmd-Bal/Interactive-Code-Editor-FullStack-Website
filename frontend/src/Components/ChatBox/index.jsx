@@ -4,6 +4,7 @@ import Text from "./TextBar";
 import "./styles.css";
 import { useState } from "react";
 import AllMessages from "./allMessages";
+import axios from "axios";
 
 const ChatBox = () => {
   const [messages, setMessages] = useState([]);
