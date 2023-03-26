@@ -38,6 +38,7 @@ const LoginBlock = () => {
       }
     })
     .then(response => {
+        //TO ADD THE DIRECTORY CHANGE
     })
     .catch(error => {
       console.log(error);
