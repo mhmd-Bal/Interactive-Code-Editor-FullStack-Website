@@ -19,6 +19,19 @@ const CodeEditor = ({ setOutput }) => {
 
   const handleSaveClick = () => {
     console.log("Save clicked");
+    axios.post('localhost:8000/api/v0.0.1/code/insert', {
+      name: filename,
+      content: content,
+      user_id: 1
+    })
+    .then(function (response) {
+      console.log("saved");
+      console.log(response.data.status);
+    })
+    .catch(function (error) {
+      console.error(error);
+      console.log("not saved");
+    });
   };
 
   const handleCompileClick = () => {
@@ -37,8 +50,7 @@ const CodeEditor = ({ setOutput }) => {
       data: encodedParams,
     };
 
-    axios
-      .request(options)
+    axios.request(options)
       .then(function (response) {
         console.log(response.data.Result);
         setOutput(response.data.Result);
@@ -52,21 +64,15 @@ const CodeEditor = ({ setOutput }) => {
     <div className="code-editor-block">
       <div className="code-editor-panel">
         <div className="code-editor-filename">
-          <p>{filename}</p>
+        <textarea value={filename}onChange={(e) => setFilename(e.target.value)}></textarea>
         </div>
         <div className="code-editor-controls">
-          <AppButton
-            button_name={<i className="fa-solid fa-download"></i>}onClick={handleDownloadClick}/>
-          <AppButton
-            button_name={<i className="fa-solid fa-floppy-disk"></i>}onClick={handleSaveClick}/>
-          <AppButton
-            button_name={<i className="fa-solid fa-person-running"></i>}onClick={handleCompileClick}/>
+          <AppButton button_name={<i className="fa-solid fa-download"></i>}onClick={handleDownloadClick}/>
+          <AppButton button_name={<i className="fa-solid fa-floppy-disk"></i>}onClick={handleSaveClick}/>
+          <AppButton button_name={<i className="fa-solid fa-person-running"></i>}onClick={handleCompileClick}/>
         </div>
       </div>
-      <textarea
-        value={content}
-        onChange={(e) => setContent(e.target.value)}
-      ></textarea>
+      <textarea value={content} onChange={(e) => setContent(e.target.value)}></textarea>
     </div>
   );
 };

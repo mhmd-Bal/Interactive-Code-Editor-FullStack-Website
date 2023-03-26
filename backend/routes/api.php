@@ -1,5 +1,5 @@
 <?php
-
+header('Access-Control-Allow-Origin: *');
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
@@ -23,6 +23,7 @@ Route::group(["prefix" => "v0.0.1",'middleware' => ['cors']], function(){
 
             Route::group(["prefix" => "code",], function(){
                 Route::post('/save',[CodeController:: class, "saveCode"]);
+                Route::post('/insert',[CodeController:: class, "insertCode"])->middleware('cors');
                 Route::post('/add',[CodeController:: class, "insertCode"]);
                 Route::get('/get_saved/{id}',[CodeController:: class, "getSavedCodes"]);
                 Route::get('/{id}',[CodeController:: class, "getCodes"]);
