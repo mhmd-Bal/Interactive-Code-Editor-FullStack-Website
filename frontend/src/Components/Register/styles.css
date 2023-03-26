@@ -1,0 +1,56 @@
+.register-block {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .register-block label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .register-block input[type="email"],
+  .register-block input[type="password"] {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid light_purple;
+    border-radius: 3px;
+  }
+  
+  .register-block button[type="submit"] {
+    background-color: dark_purple;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .register-block button[type="submit"]:hover {
+    background-color: redish_purple;
+  }
+  
+  @media (max-width: 768px) {
+    .register-block {
+      width: 100%;
+      max-width: 500px;
+    }
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in {
+    animation: fade-in 0.5s ease-in-out;
+  }
