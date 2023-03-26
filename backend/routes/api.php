@@ -14,8 +14,6 @@ Route::group(["prefix" => "v0.0.1"], function(){
         Route::post('/logout',[AuthController:: class, "logout"]);
         Route::post('/refresh',[AuthController:: class, "refresh"]);
         Route::get('/me',[AuthController:: class, "me"]);
-        Route::post('/getChat',[ChatController:: class, "GetMessage"]);
-        Route::post('/sendMessage',[ChatController:: class, "SendMessage"]);
 
         
         Route::group(["middleware" => ["auth:api"]], function(){
@@ -29,6 +27,11 @@ Route::group(["prefix" => "v0.0.1"], function(){
                 Route::get('/get_saved/{id}',[CodeController:: class, "getSavedCodes"]);
                 Route::get('/{id}',[CodeController:: class, "getCodes"]);
                 Route::post('/compile', [CodeController::class, 'compile']);
+
+                Route::group(["prefix" => "chat"], function(){
+                    Route::post('/getChat',[ChatController:: class, "getMessage"]);
+                    Route::post('/sendMessage',[ChatController:: class, "sendMessage"]);
+            });
             });
         });
 });
