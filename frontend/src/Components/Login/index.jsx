@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import "./styles.css";
+import axios from "axios";
+
 
 const LoginBlock = () => {
   const [email, setEmail] = useState('');
@@ -25,7 +27,21 @@ const LoginBlock = () => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-
+    axios.post('http://127.0.0.1:8000/api/v0.0.1/login', {
+      email: email,
+      password: password
+    }, {
+      headers: {
+        'content-type': 'application/json',
+        'Accept' : 'application/json',
+        'Authorization': 'bearer ' + token
+      }
+    })
+    .then(response => {
+    })
+    .catch(error => {
+      console.log(error);
+    });
   };
 
   return (
@@ -54,7 +70,7 @@ const LoginBlock = () => {
           {passwordError && <div className="error">{passwordError}</div>}
         </div>
         <button type="submit">Login</button>
-        <h3>Don't Have an Account? <a>Sign Up Here</a></h3>
+        <p>Don't Have an Account? <a>Sign Up Here</a></p>
       </form>
     </div>
   );
