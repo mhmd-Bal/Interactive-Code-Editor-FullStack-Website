@@ -13,7 +13,7 @@
 //                     <p>{filename}</p>
 //                 </div>
 //                 <div className="compiler-controls">
-//                     {/* <AppButton button_name={<i className="fa-solid fa-eraser"></i>}/> */}
+//                     {/* <AppButton button_name={<i class="fa-solid fa-eraser"></i>}/> */}
 //                     <AppButton button_name="Clear"/>
 //                 </div>
 //             </div>

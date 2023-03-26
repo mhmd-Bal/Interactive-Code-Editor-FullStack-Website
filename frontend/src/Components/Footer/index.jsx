@@ -7,10 +7,10 @@ const Footer = () => {
   return (
     <div className="footer-container">
         <div className="footer-buttons">
-            <AppButton button_name={<i className="fa-brands fa-instagram"></i>}/>
-            <AppButton button_name={<i className="fa-brands fa-facebook"></i>}/>
-            <AppButton button_name={<i className="fa-brands fa-twitter"></i>}/>
-            <AppButton button_name={<i className="fa-brands fa-github"></i>}/>
+            <AppButton button_name={<i class="fa-brands fa-instagram"></i>}/>
+            <AppButton button_name={<i class="fa-brands fa-facebook"></i>}/>
+            <AppButton button_name={<i class="fa-brands fa-twitter"></i>}/>
+            <AppButton button_name={<i class="fa-brands fa-github"></i>}/>
         </div>
         <div className="footer-navigation">
             <a href="#">Home</a>

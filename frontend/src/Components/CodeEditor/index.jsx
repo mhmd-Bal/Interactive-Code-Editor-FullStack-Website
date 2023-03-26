@@ -12,9 +12,9 @@
 //                     <p>{filename}</p>
 //                 </div>
 //                 <div className="code-editor-controls">
-//                     <AppButton button_name={<i className="fa-solid fa-download"></i>}/>
-//                     <AppButton button_name={<i className="fa-solid fa-floppy-disk"></i>}/>
-//                     <AppButton button_name={<i className="fa-solid fa-person-running"></i>}/>
+//                     <AppButton button_name={<i class="fa-solid fa-download"></i>}/>
+//                     <AppButton button_name={<i class="fa-solid fa-floppy-disk"></i>}/>
+//                     <AppButton button_name={<i class="fa-solid fa-person-running"></i>}/>
 //                 </div>
 //             </div>
 //             <textarea placeholder="print('Hello World!');"></textarea>
