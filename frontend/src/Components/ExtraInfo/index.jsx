@@ -6,7 +6,7 @@ const ExtraInfo = () => {
   return (
     <section className="features">
         <div className="feature">
-            {/* <i class="fa-solid fa-code"></i> */}
+            {/* <i className="fa-solid fa-code"></i> */}
             <i className="fa-solid fa-laptop-code"></i>
             <h2>Build & Test</h2>
             <p>Get work done quicker by building out entire projects or isolating code to test features and animations.</p>

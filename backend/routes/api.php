@@ -7,7 +7,7 @@ use App\Http\Controllers\CodeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ChatController;
 
-Route::group(["prefix" => "v0.0.1"], function(){
+Route::group(["prefix" => "v0.0.1",'middleware' => ['cors']], function(){
 
         Route::post('/login',[AuthController:: class, "login"]);
         Route::post('/register',[AuthController:: class, "register"]);
@@ -23,7 +23,7 @@ Route::group(["prefix" => "v0.0.1"], function(){
             Route::get('/users', [UserController::class, 'getUsers']);
             Route::get('/users/search', [UserController::class, 'search']);
 
-            Route::group(["prefix" => "code"], function(){
+            Route::group(["prefix" => "code",], function(){
                 Route::post('/save',[CodeController:: class, "saveCode"]);
                 Route::post('/add',[CodeController:: class, "insertCode"]);
                 Route::get('/get_saved/{id}',[CodeController:: class, "getSavedCodes"]);

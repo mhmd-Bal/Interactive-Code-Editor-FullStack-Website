@@ -10,7 +10,7 @@ const Search = () => {
         type="search"
         placeholder="Search for users"
       />
-      <AppButton button_name={<i class='fa-solid fa-magnifying-glass'></i>}/>
+      <AppButton button_name={<i className='fa-solid fa-magnifying-glass'></i>}/>
     </div>
   );
 };
