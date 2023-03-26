@@ -1,0 +1,27 @@
+.to {
+  background-color: rgb(84, 24, 69);
+  color: aliceblue;
+  display: flex;
+  align-self: self-end;
+}
+
+.message {
+  width: 15%;
+  margin: 25px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: x-large;
+}
+.from {
+  background-color: rgb(255, 195, 15);
+}
+
+.inbox {
+  height: 70%;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+}

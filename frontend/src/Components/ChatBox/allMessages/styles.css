@@ -1,6 +1,8 @@
 .to {
   background-color: rgb(84, 24, 69);
   color: aliceblue;
+  display: flex;
+  align-self: self-end;
 }
 
 .message {
@@ -22,9 +24,4 @@
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
-}
-
-.to {
-  display: flex;
-  align-self: self-end;
 }

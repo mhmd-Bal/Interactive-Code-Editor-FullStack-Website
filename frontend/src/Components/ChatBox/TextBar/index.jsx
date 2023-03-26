@@ -1,11 +1,18 @@
 import React from "react";
 import "./styles.css";
 
-const Text = () => {
+const Text = (value, update, send) => {
   return (
     <div className="textBox">
-      <input type="text" placeholder="Type the message here.." />
-      <button className="submit">SEND</button>
+      <input
+        value={value}
+        onChange={update}
+        type="text"
+        placeholder="Type the message here.."
+      />
+      <button onClick={send} className="submit">
+        SEND
+      </button>
     </div>
   );
 };

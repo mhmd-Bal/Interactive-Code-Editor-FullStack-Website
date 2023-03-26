@@ -1,17 +1,15 @@
 import React from "react";
 import "./styles.css";
-
-const Message = () => {
+import Message from "./Messages/Message";
+const AllMessages = (messages) => {
   return (
     <div className="inbox">
       <div className="message from">Hii</div>
-      <div className="message to">Hiii</div>
-      <div className="message to">Kifak</div>
-      <div className="message to">?</div>
       <div className="message from">El hamdella</div>
       <div className="message from">W enta?</div>
+      <Message messages={messages} />
     </div>
   );
 };
 
-export default Message;
+export default AllMessages;
