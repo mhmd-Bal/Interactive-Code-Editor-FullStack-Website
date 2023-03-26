@@ -4,6 +4,7 @@ import ChatBox from './Pages/ChatBoxPage';
 import HomePage from './Pages/HomePage';
 import LoginPage from './Pages/LoginPage';
 import AdminPannelPage from './Pages/AdminPannelPage';
+import CodeCompilerPage from './Pages/CodeCompilerPage';
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <Route path="/chat" element={<ChatBox />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/admin" element={<AdminPannelPage />} />
+      <Route path="/compile_code" element={<CodeCompilerPage />} />
       <Route path="*" element={<div>404</div>} />
     </Routes>
   );
