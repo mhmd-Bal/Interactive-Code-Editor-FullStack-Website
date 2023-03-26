@@ -13,7 +13,6 @@ class CreateChatsTable extends Migration
             $table->longText('content');
             $table->unsignedBigInteger('sender_id');
             $table->unsignedBigInteger('receiver_id');
-            $table->dateTime('timestamp');
             $table->foreign('sender_id')->references('id')->on('users');
             $table->foreign('receiver_id')->references('id')->on('users');
             $table->timestamps();

@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CodeController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ChatController;
 
 Route::group(["prefix" => "v0.0.1"], function(){
 
@@ -13,6 +14,8 @@ Route::group(["prefix" => "v0.0.1"], function(){
         Route::post('/logout',[AuthController:: class, "logout"]);
         Route::post('/refresh',[AuthController:: class, "refresh"]);
         Route::get('/me',[AuthController:: class, "me"]);
+        Route::post('/getChat',[ChatController:: class, "GetMessage"]);
+        Route::post('/sendMessage',[ChatController:: class, "SendMessage"]);
 
         
         Route::group(["middleware" => ["auth:api"]], function(){
