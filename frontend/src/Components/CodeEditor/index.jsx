@@ -5,7 +5,7 @@ import "./styles.css";
 
 const CodeEditor = ({ setOutput }) => {
   const [filename, setFilename] = useState("Name of File.py");
-  const [content, setContent] = useState("print('Hello World!');");
+  const [content, setContent] = useState("print('Hello World!')");
 
   const handleDownloadClick = () => {
     console.log("Download clicked");

@@ -62,28 +62,5 @@ class CodeController extends Controller
             'favorites'=> $favorites
         ]);
     }
-    public function compile(Request $request){
-        $code=  $request->input('code');
-        $data = [
-            'script' => $code,
-            'language' => 'python3',
-            'versionIndex' => '0',
-            'clientId' => 'd76dce4beed77c1cc42e813648f5236e',
-            'clientSecret' => '65b0d91cf25062d798c8acc84027eb1e6f61b8a77f422c77e02662136abcddba'
-        ];
-        $client = new Client([
-            'headers' => [
-                'Content-Type' => 'application/json',
-                'User-Agent' => 'AppName/1.0'
-            ]
-        ]);
-        $response = $client->post('https://api.jdoodle.com/v1/execute', [
-            'body' => json_encode($data)
-        ]);
-        $output = json_decode($response->getBody()->getContents(), true);
-        return response()
-        ->json(['output' => $output])
-        ->header('Access-Control-Allow-Origin', '*');
-    }
     
 }

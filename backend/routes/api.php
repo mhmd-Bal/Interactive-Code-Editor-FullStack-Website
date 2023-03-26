@@ -26,7 +26,6 @@ Route::group(["prefix" => "v0.0.1",'middleware' => ['cors']], function(){
                 Route::post('/add',[CodeController:: class, "insertCode"]);
                 Route::get('/get_saved/{id}',[CodeController:: class, "getSavedCodes"]);
                 Route::get('/{id}',[CodeController:: class, "getCodes"]);
-                Route::post('/compile', [CodeController::class, 'compile']);
 
                 Route::group(["prefix" => "chat"], function(){
                     Route::post('/getChat',[ChatController:: class, "getMessage"]);
