@@ -1,10 +1,10 @@
 import React from "react";
 import "./styles.css";
 
-const Message = (messages) => {
+const Message = (props) => {
   return (
     <>
-      {messages.map((message) => (
+      {props.messages.map((message) => (
         <div className="message to">{message}</div>
       ))}
     </>
