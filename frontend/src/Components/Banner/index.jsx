@@ -5,7 +5,7 @@ import "./styles.css";
 
 const HomeBanner = () => {
   return (
-    <div className="container">
+    <div className="banner-container">
         <h1 class="banner-title">Begin coding in python with our developers</h1>
         <AppButton  button_name="Signup Now!"/>
     </div>
