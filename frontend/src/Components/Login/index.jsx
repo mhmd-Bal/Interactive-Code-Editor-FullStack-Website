@@ -50,23 +50,11 @@ const LoginBlock = () => {
       <form onSubmit={handleFormSubmit}>
         <div className="form-group">
           <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={email}
-            onChange={handleEmailChange}
-          />
+          <input type="email" id="email" name="email" value={email} onChange={handleEmailChange} />
         </div>
         <div className="form-group">
           <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            value={password}
-            onChange={handlePasswordChange}
-          />
+          <input type="password" id="password" name="password" value={password} onChange={handlePasswordChange} />
           {passwordError && <div className="error">{passwordError}</div>}
         </div>
         <button type="submit">Login</button>
