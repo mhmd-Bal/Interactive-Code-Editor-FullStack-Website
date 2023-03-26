@@ -1,8 +1,10 @@
 import React from "react";
-import AppButton from "../../Button";
+import AppButton from "../Button";
 import "./styles.css";
+import { useState } from "react";
 
 const Search = () => {
+
   return (
     <div className="searchBar_block">
       <input
