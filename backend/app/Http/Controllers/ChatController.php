@@ -7,7 +7,7 @@ use App\Models\Chat;
 
 class ChatController extends Controller
 {
-    public function SendMessage(Request $request){
+    public function sendMessage(Request $request){
         $message = Chat::create([
             'sender_id' => $request->sender_id,
             'receiver_id' => $request->receiver_id,
@@ -18,7 +18,7 @@ class ChatController extends Controller
             'status'=>'Message is sent'
         ]);
     }
-    public function GetMessage(Request $request){
+    public function getMessage(Request $request){
         $message = Chat::where("sender_id",$request->sender_id)
         ->where("receiver_id",$request->receiver_id)->orWhere("receiver_id",$request->sender_id)->where("sender_id",$request->receiver_id)->get();
         return response()->json([
