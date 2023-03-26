@@ -10,3 +10,5 @@ const Sidebar = ({ isOpen, toggle }) => {
         </aside>
     );
 };
+
+export default Sidebar
