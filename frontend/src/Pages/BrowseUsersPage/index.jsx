@@ -12,7 +12,6 @@ import Search from "../../Components/SearchBar";
 const BrowseUsersPage = () => {
 
   const [users, setUsers] = useState([]);
-  const [searchedusers, setSearchedusers] = useState([]);
   const [value, setValue] = useState('');
 
   const token = sessionStorage.getItem("token");
@@ -27,15 +26,6 @@ const BrowseUsersPage = () => {
     },
   };
 
-  const getSearchedUsers = {
-    method: 'GET',
-    url: `http://127.0.0.1:8000/api/v0.0.1/users/search?search_input={value}`,
-    headers: {
-      'content-type': 'application/json',
-      'Accept' : 'application/json',
-      'Authorization': 'bearer ' + token
-    },
-  }
 
   useEffect(() => {
     axios.request(getUsers)
@@ -43,28 +33,44 @@ const BrowseUsersPage = () => {
             setUsers(response.data.users);
         })
   },[]);
-
-  useEffect(() => {
-    axios.request(getSearchedUsers)
-        .then(response => {
-            setSearchedusers(response.data.users);
-        })
-  },[]);
-
+  
+  
   const handleChange = (e) => {
     setValue(e.target.value)
+    console.log(value);
+  }
+
+  const handleSearch = () => {
+
+    const getSearchedUsers = {
+      method: 'GET',
+      url: 'http://127.0.0.1:8000/api/v0.0.1/users/search?search_input=' + value,
+      headers: {
+        'content-type': 'application/json',
+        'Accept' : 'application/json',
+        'Authorization': 'bearer ' + token
+      },
+    }
+
+    axios
+      .request(getSearchedUsers)
+      .then(function (response) {
+        console.log(response);
+        setUsers(response.data.users)
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
   }
 
   return (
     <div style={{overflowX: "hidden"}}>
       <NavBar />
       <div className="search-block">
-        <Search value={value} handleChange={handleChange}/>
+        <Search value={value} handleChange={handleChange} handleSearch={handleSearch}/>
       </div>
       <div className="list-of-users">
-        {searchedusers != undefined ? searchedusers.map((user) => (
-          <User profile_picture={ user.profile_picture} username={user.username} email={user.email} id={user.id} />
-        )) : users.map((user) => (
+        {users.map((user) => (
           <User profile_picture={ user.profile_picture} username={user.username} email={user.email} id={user.id} />
         ))}
       </div>
