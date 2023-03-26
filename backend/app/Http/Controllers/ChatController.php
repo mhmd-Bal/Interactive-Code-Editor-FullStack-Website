@@ -20,7 +20,7 @@ class ChatController extends Controller
     }
     public function GetMessage(Request $request){
         $message = Chat::where("sender_id",$request->sender_id)
-        ->where("receiver_id",$request->receiver_id)->get();
+        ->where("receiver_id",$request->receiver_id)->orWhere("receiver_id",$request->sender_id)->where("sender_id",$request->receiver_id)->get();
         return response()->json([
             "Message" => $message,
         ]);
