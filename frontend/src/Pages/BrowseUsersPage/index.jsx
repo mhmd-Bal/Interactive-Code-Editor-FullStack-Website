@@ -6,6 +6,7 @@ import "./styles.css";
 import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
+import AppButton from "../../Components/Button";
 
 
 const BrowseUsersPage = () => {
@@ -31,14 +32,12 @@ const BrowseUsersPage = () => {
         })
   },[]);
 
-  console.log(users);
-
   return (
     <div style={{overflowX: "hidden"}}>
       <NavBar />
       <div className="list-of-users">
         {users.map((user) => (
-          <User profile_picture={user.profile_picture} username={user.username} email={user.email} />
+          <User profile_picture={user.profile_picture} username={user.username} email={user.email} id={user.id} />
         ))}
       </div>
       <Footer />
