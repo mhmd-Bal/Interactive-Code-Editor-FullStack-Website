@@ -1,0 +1,19 @@
+button{
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color: var(--light_purple);
+    color: white;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+}
+
+button:hover{
+    background-color: var(--primary_blue);
+    translate: 0px -2px;
+}
+
+button:focus{
+    background-color: var(--darkish_blue);
+}

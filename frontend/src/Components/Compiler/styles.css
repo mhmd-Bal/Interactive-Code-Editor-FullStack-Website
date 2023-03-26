@@ -1,0 +1,45 @@
+.compiler-block{
+    width: 100vw;
+    height: 100%;
+}
+
+.compiler-panel{
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f8f8;
+    box-sizing: border-box;
+    border-left: 2px solid #ccc;
+}
+
+.compiler-controls{
+    display: flex;
+    gap: 10px;
+}
+
+.compiler-filename{
+    background-color: #f8f8f8;
+    height: 100%;
+    width: 20%;
+    text-align: center;
+}
+
+.compiler-filename p{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.compiler-output {
+    width: 50vw;
+    height: 74vh;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    background-color: #f8f8f8;
+    resize: none;
+    overflow-x: scroll;
+    overflow-y: scroll;
+} 

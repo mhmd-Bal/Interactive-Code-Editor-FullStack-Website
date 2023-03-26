@@ -1,0 +1,28 @@
+.footer-container{
+    width: 100%;
+    padding-top: 35px;
+    padding-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer-buttons, .footer-navigation{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer-navigation a{
+    text-decoration: none;
+    color: black;
+}
+
+.footer-note p{
+    color: rgb(175, 175, 175);
+}

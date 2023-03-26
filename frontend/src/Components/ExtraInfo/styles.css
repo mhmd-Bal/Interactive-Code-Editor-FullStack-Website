@@ -1,0 +1,33 @@
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: top;
+    justify-content: center;
+    background-color: #FAF9F6;
+    padding: 50px;
+    height: 80vh;
+}
+  
+.feature {
+    width: 30%;
+    height: 100%;
+    margin: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: 0.2s ease-in-out;
+    background-color: white;
+}
+
+.feature:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.feature i {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: var(--light_purple);
+}

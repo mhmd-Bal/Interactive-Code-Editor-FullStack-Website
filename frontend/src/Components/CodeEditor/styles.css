@@ -1,0 +1,43 @@
+.code-editor-block{
+    width: 100vw;
+    height: 100%;
+}
+
+.code-editor-panel{
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f8f8;
+    box-sizing: border-box;
+    border-right: 2px solid #ccc;
+}
+
+.code-editor-controls{
+    display: flex;
+    gap: 10px;
+}
+
+.code-editor-filename{
+    background-color: #f8f8f8;
+    height: 100%;
+    width: 20%;
+    text-align: center;
+}
+
+.code-editor-filename p{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.code-editor-block textarea {
+    width: 100%;
+    height: 74vh;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    background-color: #f8f8f8;
+    resize: none;
+}
