@@ -62,4 +62,5 @@ class CodeController extends Controller
             'favorites'=> $favorites
         ]);
     }
+    
 }

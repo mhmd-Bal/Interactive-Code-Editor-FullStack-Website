@@ -28,6 +28,7 @@ Route::group(["prefix" => "v0.0.1"], function(){
                 Route::post('/add',[CodeController:: class, "insertCode"]);
                 Route::get('/get_saved/{id}',[CodeController:: class, "getSavedCodes"]);
                 Route::get('/{id}',[CodeController:: class, "getCodes"]);
+                Route::post('/compile', [CodeController::class, 'compile']);
             });
         });
 });
