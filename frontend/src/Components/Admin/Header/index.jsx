@@ -37,7 +37,6 @@ const Header = ({ toggle }) => {
         </div>
         <div ><h1>Admin Pannel</h1></div>
         <AppButton button_name="Logout" onClick={handleLogout} />
-
       </nav>
     </header>
   );
