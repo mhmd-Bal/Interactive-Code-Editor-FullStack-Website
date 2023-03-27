@@ -6,7 +6,6 @@ import LoginPage from './Pages/LoginPage';
 import AdminPannelPage from './Pages/AdminPannelPage';
 import CodeCompilerPage from './Pages/CodeCompilerPage';
 import BrowseUsersPage from './Pages/BrowseUsersPage';
-import MyCodesPage from './Pages/MyCodesPage';
 // import RegisterPage from './Pages/RegisterPage';
 
 function App() {
@@ -16,7 +15,7 @@ function App() {
       <Route path="/" element={<HomePage />} />
       <Route path="/chat" element={<ChatBox />} />
       <Route path="/login" element={<LoginPage />} />
-      {/* <Route path="/register" element={<RegisterPage />} /> */}
+      <Route path="/register" element={<RegisterPage />} />
       <Route path="/admin" element={<AdminPannelPage />} />
       <Route path="/compile_code" element={<CodeCompilerPage />} />
       <Route path="/browse_users" element={<BrowseUsersPage />} />

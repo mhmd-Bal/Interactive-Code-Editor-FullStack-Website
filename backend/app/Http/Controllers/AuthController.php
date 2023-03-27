@@ -36,6 +36,7 @@ class AuthController extends Controller{
 
     public function register(Request $request){
 
+        error_log($request->email);
         $user = User::where('email', $request->email)->first();
 
         if ($user) {

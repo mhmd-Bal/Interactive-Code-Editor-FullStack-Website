@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import "./styles.css";
 import axios from "axios";
-
+import { useNavigate } from "react-router-dom";
 
 const RegisterBlock = () => {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [passwordError, setPasswordError] = useState('');
+
+    const navigate = useNavigate();
 
     const handleUsernameChange = (e) => {
         setUsername(e.target.value);
@@ -31,26 +33,26 @@ const RegisterBlock = () => {
     };
 
     const handleFormSubmit = (e) => {
-        const token = sessionStorage.getItem("token");
-    
+
         e.preventDefault();
         axios.post('http://127.0.0.1:8000/api/v0.0.1/register', {
-            username: username,
-            email: email,
-            password: password
+            'username': username,
+            'email': email,
+            'password': password
         }, {
             headers: {
                 'content-type': 'application/json',
                 'Accept': 'application/json',
             }
         })
-            .then(response => {
-                //TO ADD THE DIRECTORY CHANGE
-                console.log(response);
-            })
-            .catch(error => {
-                console.log(error);
-            });
+        .then(response => {
+            if (response.data.status == "success"){
+                navigate("/login");
+            }
+        })
+        .catch(error => {
+            console.log(error);
+        });
     };
 
     return (

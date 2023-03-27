@@ -10,6 +10,10 @@ const ChatBox = () => {
   const [message, setMessage] = useState([]);
   const [value, setValue] = useState("");
 
+  const user = sessionStorage.getItem("");
+
+  axios.post("http://localhost:8000/api/v0.0.1/chat/get_chat");
+
   const update = (event) => {
     setValue(event.target.value);
   };

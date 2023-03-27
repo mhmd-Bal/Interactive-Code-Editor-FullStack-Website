@@ -1,5 +1,4 @@
 import React , {useState, useEffect} from "react";
-import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
 function CodesPage() {
@@ -20,7 +19,7 @@ function CodesPage() {
   useEffect(() => {
     axios.request(getLoggedInUserCodes)
         .then(response => {
-            setCodes(response.data.code);
+            setCodes(response.data.codes);
             console.log(response);
         })
   },[]);

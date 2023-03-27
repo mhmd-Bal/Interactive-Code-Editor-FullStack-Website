@@ -27,7 +27,6 @@ const CodeEditor = ({ setOutput }) => {
     },{ headers })
     .then(function (response) {
       alert(response.data.status);
-      console.log(response.data.status);
       console.log(localStorage.getItem('user_id'));
     })
     .catch(function (error) {
@@ -42,18 +41,17 @@ const CodeEditor = ({ setOutput }) => {
 
     const options = {
       method: "POST",
-      url: "https://code-compiler.p.rapidapi.com/v2",
+      url: process.env.REACT_APP_CODE_COMPILE_API_URL,
       headers: {
         "content-type": "application/x-www-form-urlencoded",
-        "X-RapidAPI-Key": "c2f267bd0cmsh63f6cc991a18825p1066f7jsn631466f02f8b",
-        "X-RapidAPI-Host": "code-compiler.p.rapidapi.com",
+        "X-RapidAPI-Key": process.env.REACT_APP_API_KEY,
+        "X-RapidAPI-Host": process.env.REACT_APP_X_RapidAPI_Host,
       },
       data: encodedParams,
     };
 
     axios.request(options)
       .then(function (response) {
-        console.log(response.data.Result);
         response.data.Result===null?setOutput('Code Contains Error, Please Fix Code Syntax'):setOutput(response.data.Result)
       })
       .catch(function (error) {
