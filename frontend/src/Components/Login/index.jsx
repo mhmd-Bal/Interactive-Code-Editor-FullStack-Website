@@ -34,11 +34,12 @@ const LoginBlock = () => {
       headers: {
         'content-type': 'application/json',
         'Accept' : 'application/json',
-        'Authorization': 'bearer ' + token
       }
     })
     .then(response => {
-        //TO ADD THE DIRECTORY CHANGE
+      localStorage.setItem('user_id', JSON.stringify(response.data.user.id));
+      localStorage.setItem('token', response.data.token);
+      // window.location.href = '/userprofile.html';
     })
     .catch(error => {
       console.log(error);
@@ -51,11 +52,11 @@ const LoginBlock = () => {
       <form onSubmit={handleFormSubmit}>
         <div className="form-group">
           <label htmlFor="email">Email:</label>
-          <input type="email" id="email" name="email" value={email} onChange={handleEmailChange} />
+          <input type="email" id="email" name="email" value={email} onChange={handleEmailChange} autoComplete="off"/>
         </div>
         <div className="form-group">
           <label htmlFor="password">Password:</label>
-          <input type="password" id="password" name="password" value={password} onChange={handlePasswordChange} />
+          <input type="password" id="password" name="password" value={password} onChange={handlePasswordChange} autoComplete="off"/>
           {passwordError && <div className="error">{passwordError}</div>}
         </div>
         <button type="submit">Login</button>
