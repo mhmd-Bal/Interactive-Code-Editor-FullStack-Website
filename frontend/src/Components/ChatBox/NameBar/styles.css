@@ -2,20 +2,20 @@
   display: flex;
   justify-content: start;
   align-items: center;
-  height: 20vh;
+  height: 15vh;
   padding: 10px 30px;
   background-color: #66004d;
 }
 
 .userName {
-  font-size: xx-large;
+  font-size: x-large;
   color: rgb(255, 255, 255);
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .pic {
   margin: 25px;
-  height: 80%;
+  height: 90%;
   width: 7%;
   border-radius: 100%;
 }
@@ -31,5 +31,5 @@
   justify-content: start;
   align-items: center;
   height: 100%;
-  width: 90%;
+  width: 70%;
 }
