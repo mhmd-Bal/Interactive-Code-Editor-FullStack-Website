@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import "./styles.css";
 import axios from "axios";
+import AppButton from "../Button";
+import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 
-const LoginBlock = () => {
+const LoginBlock = (props) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [passwordError, setPasswordError] = useState('');
@@ -59,7 +61,7 @@ const LoginBlock = () => {
 
   return (
     <div className="login-block">
-      <h2>Login</h2>
+      <h2>LOGIN</h2>
       <form onSubmit={handleFormSubmit}>
         <div className="form-group">
           <label htmlFor="email">Email:</label>
@@ -70,7 +72,7 @@ const LoginBlock = () => {
           <input type="password" id="password" name="password" value={password} onChange={handlePasswordChange} autoComplete="off" />
           {passwordError && <div className="error">{passwordError}</div>}
         </div>
-        <p>Don't Have an Account? <a>Sign Up Here</a></p>
+        <p>Don't Have an Account? <Link to="/register">Sign Up Here</Link></p>
         <button type="submit">Login</button>
         <button type="button" onClick={handleCancel}>Cancel</button>
       </form>
