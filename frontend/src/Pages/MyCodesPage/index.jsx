@@ -33,9 +33,9 @@ function CodesPage() {
       <h1 className="center">My Codes</h1>
       <div className="container">
          {codes.map(code => (
-        <div key={code.id} className="box">
+        <div key={code.id} className="box1">
           <h2 className="center">{code.name}</h2>
-          <p>{code.content}</p>
+          <pre>{code.content}</pre>
         </div>
       ))}
       </div>

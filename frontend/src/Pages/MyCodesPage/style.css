@@ -7,9 +7,10 @@
     justify-content: space-around;
 
 }
-.box{
+.box1{
     display:flex;
     flex-direction: column;
+    justify-content: left;
     margin-bottom: 30px;
     margin-left: 80px;
     background-color: #fff;
@@ -21,7 +22,7 @@
     width: 25%;
     height: 400px;
 }
-.box p {
+.box pre {
     white-space: pre-wrap;
     font-size: 14px;
     padding: 10px; 
