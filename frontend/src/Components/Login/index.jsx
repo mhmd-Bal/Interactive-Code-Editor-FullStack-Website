@@ -27,7 +27,7 @@ const LoginBlock = () => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://127.0.0.1:8000/api/v0.0.1/login', {
+    axios.post('http://localhost:8000/api/v0.0.1/login', {
       email: email,
       password: password
     }, {
@@ -39,7 +39,8 @@ const LoginBlock = () => {
     .then(response => {
       localStorage.setItem('user_id', JSON.stringify(response.data.user.id));
       localStorage.setItem('token', response.data.token);
-      // window.location.href = '/userprofile.html';
+      console.log("it works")
+      // window.location.href = '/userprofile.html';               // change later to redirect user to another page
     })
     .catch(error => {
       console.log(error);
