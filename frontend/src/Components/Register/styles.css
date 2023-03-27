@@ -37,7 +37,7 @@ body{
   .register-block button[type="submit"] {
     margin-left: 40%;
     background-color: dark_purple;
-    color: #fff;
+    color: white;
     border: none;
     border-radius: 3px;
     padding: 10px 20px;
