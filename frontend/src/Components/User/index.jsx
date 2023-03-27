@@ -14,7 +14,7 @@ const User = (props) => {
     return (
         <div className="user-block">
             <div className="user-info">
-                <div><img src={props.profile_picture}></img></div>
+                <div><img src={"randomPic.webp"}></img></div>
                 <h4>{props.username}</h4>
                 <p>{props.email}</p>
             </div>
