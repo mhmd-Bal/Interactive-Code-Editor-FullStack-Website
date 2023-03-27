@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles.css";
 import Message from "./Messages/Message";
+import "../../../index.css";
 
 const AllMessages = (props) => {
   console.log(props.message);
