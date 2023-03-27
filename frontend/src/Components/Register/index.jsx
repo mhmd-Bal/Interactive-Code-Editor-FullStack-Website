@@ -42,11 +42,11 @@ const RegisterBlock = () => {
             headers: {
                 'content-type': 'application/json',
                 'Accept': 'application/json',
-                'Authorization': 'bearer ' + token
             }
         })
             .then(response => {
                 //TO ADD THE DIRECTORY CHANGE
+                console.log(response);
             })
             .catch(error => {
                 console.log(error);
@@ -60,7 +60,7 @@ const RegisterBlock = () => {
                 <div className="form-group">
                     <label htmlFor="username">Username:</label>
                     <input type="text" id="username" name="username" value={username} onChange={handleUsernameChange} />
-                </div>[]
+                </div>
                 <div className="form-group">
                     <label htmlFor="email">Email:</label>
                     <input type="email" id="email" name="email" value={email} onChange={handleEmailChange} />
