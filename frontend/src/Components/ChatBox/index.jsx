@@ -40,8 +40,25 @@ const ChatBox = () => {
 
   const send = () => {
     setMessage([...message, value]);
-    console.log(message);
-    console.log(value);
+    {
+      message.map((one) => {
+        axios.post(
+          "http://localhost:8000/api/v0.0.1/chat/send_message",
+          {
+            receiver_id: user,
+            content: one,
+          },
+          {
+            headers: {
+              "content-type": "application/json",
+              Accept: "application/json",
+              Authorization: "bearer " + token,
+            },
+          }
+        );
+      });
+    }
+
     setValue("");
   };
   return (
