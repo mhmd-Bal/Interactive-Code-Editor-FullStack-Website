@@ -1,8 +1,21 @@
+body{
+  background-image: url("./images/background.webp");
+  background-size: auto;
+}
+
 .register-block {
-    width: 400px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--light_purple);
+    width: 30%;
+    margin: 7% auto;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 10%;
+  }
+
+  .register-block h2{
+    text-align: center;
+    margin-bottom: 7%;
   }
   
   .register-block label {
@@ -17,11 +30,12 @@
     width: 100%;
     padding: 5px;
     margin-bottom: 10px;
-    border: 1px solid light_purple;
-    border-radius: 3px;
+    border: 1px solid black;
+    border-radius: 5%;
   }
   
   .register-block button[type="submit"] {
+    margin-left: 40%;
     background-color: dark_purple;
     color: #fff;
     border: none;
@@ -29,6 +43,10 @@
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
+  }
+
+  .form-group{
+    margin-bottom: 5%;
   }
   
   .register-block button[type="submit"]:hover {
