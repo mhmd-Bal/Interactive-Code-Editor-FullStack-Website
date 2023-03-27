@@ -22,6 +22,10 @@
     background-color: white;
 }
 
+.feature p {
+    margin: 10px;
+}
+
 .feature:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }

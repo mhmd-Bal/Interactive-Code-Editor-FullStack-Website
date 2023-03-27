@@ -6,6 +6,7 @@ import "./styles.css";
 
 const CodeCompilerPage = () => {
   const [output, setOutput] = useState("Compiler Output");
+  localStorage.setItem("current_page", "compile_code");
 
   const handleClearClick = () => {
     setOutput("");

@@ -17,3 +17,7 @@ button:hover{
 button:focus{
     background-color: var(--darkish_blue);
 }
+
+.active {
+    background-color: var(--darkish_blue);
+}

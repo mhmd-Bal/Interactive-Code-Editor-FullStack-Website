@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function NavButtons() {
+  const current_page = localStorage.getItem("current_page");
 
   const navigate = useNavigate();
   const token = localStorage.getItem("token");
@@ -47,12 +48,12 @@ function NavButtons() {
   return (
     <div className="navButtons">
       <div className={token ? "disabled" : "buttonHolder"}>
-        <AppButton button_name="Login" onClick={handleNavigateToLogin} />
-        <AppButton button_name="Signup" onClick={handleNavigateToRegister} />
+        <AppButton button_name="Login" onClick={handleNavigateToLogin} is_active={current_page == "login" ? "active" : "notactive"} />
+        <AppButton button_name="Signup" onClick={handleNavigateToRegister} is_active={current_page == "register" ? "active" : "notactive"} />
       </div>
       <div className={token ? "buttonHolder" : "disabled"}>
-        <AppButton button_name="Browse"  onClick={handleNavigateToBrowseUsers} />
-        <AppButton button_name="Compile" onClick={handleNavigateToCompileCode} />
+        <AppButton button_name="Browse"  onClick={handleNavigateToBrowseUsers} is_active={current_page == "browse_users" ? "active" : "notactive"} />
+        <AppButton button_name="Compile" onClick={handleNavigateToCompileCode} is_active={current_page == "compile_code" ? "active" : "notactive"} />
         <AppButton button_name="Logout" onClick={handleLogout} />
       </div>
       

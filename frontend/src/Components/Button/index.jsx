@@ -3,7 +3,7 @@ import "./styles.css";
 
 function AppButton(props) {
   return (
-    <button onClick={props.onClick}>{props.button_name}</button>
+    <button onClick={props.onClick} className={props.is_active}>{props.button_name}</button>
   );
 }
 

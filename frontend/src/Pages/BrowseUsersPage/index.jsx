@@ -10,12 +10,12 @@ import Search from "../../Components/SearchBar";
 
 
 const BrowseUsersPage = () => {
-
   const [users, setUsers] = useState([]);
   const [value, setValue] = useState('');
 
   const token = localStorage.getItem("token");
-
+  localStorage.setItem("current_page", "browse_users");
+  
   const getUsers = {
     method: 'GET',
     url: 'http://127.0.0.1:8000/api/v0.0.1/users/',
