@@ -1,8 +1,16 @@
 import React from "react";
 import AppButton from "../Button";
 import "./styles.css";
+import { useNavigate } from "react-router-dom";
 
 const User = (props) => {
+    const navigate = useNavigate();
+    
+    const handleNavigateChatBox = () => {
+        localStorage.setItem("receiver_id", props.id);
+        navigate("/chat");
+    }
+
     return (
         <div className="user-block">
             <div className="user-info">
@@ -11,7 +19,7 @@ const User = (props) => {
                 <p>{props.email}</p>
             </div>
             <div className="user-actions">
-                <AppButton user_id={props.id} button_name="Chat"/>
+                <AppButton onClick={handleNavigateChatBox} button_name="Chat"/>
             </div>
         </div>
     )
