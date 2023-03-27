@@ -31,6 +31,8 @@ const RegisterBlock = () => {
     };
 
     const handleFormSubmit = (e) => {
+        const token = sessionStorage.getItem("token");
+    
         e.preventDefault();
         axios.post('http://127.0.0.1:8000/api/v0.0.1/register', {
             username: username,

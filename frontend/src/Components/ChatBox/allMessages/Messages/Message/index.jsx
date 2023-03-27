@@ -5,7 +5,7 @@ const Message = (props) => {
   return (
     <>
       {props.messages.map((message) => (
-        <div className="message to">{props.messages}</div>
+        <div className="message to">{message}</div>
       ))}
     </>
   );
