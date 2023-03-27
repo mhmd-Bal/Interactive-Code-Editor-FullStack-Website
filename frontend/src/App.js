@@ -7,6 +7,7 @@ import AdminPannelPage from './Pages/AdminPannelPage';
 import CodeCompilerPage from './Pages/CodeCompilerPage';
 import BrowseUsersPage from './Pages/BrowseUsersPage';
 import RegisterPage from './Pages/RegisterPage';
+import MyCodesPage from './Pages/MyCodesPage';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
       <Route path="/admin" element={<AdminPannelPage />} />
       <Route path="/compile_code" element={<CodeCompilerPage />} />
       <Route path="/browse_users" element={<BrowseUsersPage />} />
+      <Route path="/my_codes" element={<MyCodesPage />} />
       <Route path="*" element={<div>404</div>} />
     </Routes>
   );
