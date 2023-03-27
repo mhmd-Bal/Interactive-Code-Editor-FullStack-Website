@@ -1,5 +1,8 @@
 import React , {useState, useEffect} from "react";
+import NavBar from '../../Components/NavBar';
+import Footer from "../../Components/Footer"
 import axios from 'axios';
+import "./style.css";
 
 function CodesPage() {
 
@@ -26,13 +29,17 @@ function CodesPage() {
 
   return (
     <div>
-      <h1>My Codes</h1>
-      {codes.map(code => (
-        <div key={code.id}>
-          <h3>{code.name}</h3>
-          <pre>{code.content}</pre>
+      <NavBar/>
+      <h1 className="center">My Codes</h1>
+      <div className="container">
+         {codes.map(code => (
+        <div key={code.id} className="box">
+          <h2 className="center">{code.name}</h2>
+          <p>{code.content}</p>
         </div>
       ))}
+      </div>
+      <Footer/>
     </div>
   );
 };
