@@ -9,9 +9,9 @@ import axios from "axios";
 const ChatBox = () => {
   const [message, setMessage] = useState([]);
   const [value, setValue] = useState("");
-
   const user = localStorage.getItem("");
-
+  const token = localStorage.getItem("token");
+  
   useEffect(() => {
     axios
       .post(

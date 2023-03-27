@@ -6,7 +6,8 @@ import LoginPage from './Pages/LoginPage';
 import AdminPannelPage from './Pages/AdminPannelPage';
 import CodeCompilerPage from './Pages/CodeCompilerPage';
 import BrowseUsersPage from './Pages/BrowseUsersPage';
-// import RegisterPage from './Pages/RegisterPage';
+import RegisterPage from './Pages/RegisterPage';
+import MyCodesPage from './Pages/MyCodesPage';
 
 function App() {
 
