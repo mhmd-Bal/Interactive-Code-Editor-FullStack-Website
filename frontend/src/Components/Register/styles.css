@@ -1,75 +1,91 @@
-body{
+body {
   background-image: url("./images/background.webp");
   background-size: auto;
 }
 
 .register-block {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid var(--light_purple);
-    width: 30%;
-    margin: 7% auto;
-    padding: 20px;
-    border-radius: 10%;
-  }
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--light_purple);
+  width: 30%;
+  margin: 7% auto;
+  padding: 20px;
+  border-radius: 10%;
+}
 
-  .register-block h2{
-    text-align: center;
-    margin-bottom: 7%;
-  }
-  
-  .register-block label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .register-block input[type="text"],
-  .register-block input[type="email"],
-  .register-block input[type="password"] {
-    display: block;
+.register-block h2 {
+  text-align: center;
+  margin-bottom: 7%;
+}
+
+.register-block label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.register-block input[type="text"],
+.register-block input[type="email"],
+.register-block input[type="password"] {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 5%;
+}
+
+.register-block button[type="submit"] {
+  background-color: var(--dark_purple);
+  margin-left: 32%;
+  color: white;
+  border: 1px solid var(--dark_purple);
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.register-block button[type="button"] {
+  border: 1px solid var(--darkish_blue);
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.form-group {
+  margin-bottom: 5%;
+}
+
+.register-block button[type="submit"]:hover,
+.register-block button[type="button"]:hover{
+  background-color: var(--darkish_blue);
+  color:white;
+}
+
+p {
+  margin-left: 20%;
+}
+
+@media (max-width: 768px) {
+  .register-block {
     width: 100%;
-    padding: 5px;
-    margin-bottom: 10px;
-    border: 1px solid black;
-    border-radius: 5%;
+    max-width: 500px;
   }
-  
-  .register-block button[type="submit"] {
-    margin-left: 30%;
-    background-color: dark_purple;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
   }
 
-  .form-group{
-    margin-bottom: 5%;
+  to {
+    opacity: 1;
   }
-  
-  .register-block button[type="submit"]:hover {
-    background-color: redish_purple;
-  }
-  
-  @media (max-width: 768px) {
-    .register-block {
-      width: 100%;
-      max-width: 500px;
-    }
-  }
-  
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-    }
-  
-    to {
-      opacity: 1;
-    }
-  }
-  
-  .fade-in {
-    animation: fade-in 0.5s ease-in-out;
-  }
+}
+
+.fade-in {
+  animation: fade-in 0.5s ease-in-out;
+}

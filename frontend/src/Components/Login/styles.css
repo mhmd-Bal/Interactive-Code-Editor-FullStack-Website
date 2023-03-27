@@ -70,7 +70,7 @@ p {
 }
 
 @media (max-width: 768px) {
-  .register-block {
+  .login-block {
     width: 100%;
     max-width: 500px;
   }

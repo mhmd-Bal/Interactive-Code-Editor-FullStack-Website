@@ -61,7 +61,7 @@ const RegisterBlock = () => {
 
     return (
         <div className="register-block">
-            <h2>Register</h2>
+            <h2>REGISTER</h2>
             <form onSubmit={handleFormSubmit}>
                 <div className="form-group">
                     <label htmlFor="username">Username:</label>
