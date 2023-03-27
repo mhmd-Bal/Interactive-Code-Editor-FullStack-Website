@@ -41,12 +41,14 @@ const LoginBlock = (props) => {
       }
     })
       .then(response => {
+        console.log(response);
         localStorage.setItem('user_id', JSON.stringify(response.data.user.id));
         localStorage.setItem('token', response.data.authorisation.token);
+
         if (response.data.user.is_admin == 1) {
           navigate("/admin");
         }
-        if (response.data.status == "success") {
+        else if(response.data.status == "success") {
           navigate("/");
         }
       })
