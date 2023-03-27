@@ -19,7 +19,7 @@ const CodeEditor = ({ setOutput }) => {
 
   const handleSaveClick = () => {
     console.log("Save clicked");
-    let headers= {'Authorization': 'Bearer ' + localStorage.getItem('token')};
+    let headers= {'Authorization': 'Bearer ' + sessionStorage.getItem('token')};
     axios.post('localhost:8000/api/v0.0.1/code/insert', {
       name: filename,
       content: content,

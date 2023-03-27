@@ -37,8 +37,8 @@ const LoginBlock = () => {
       }
     })
     .then(response => {
-      localStorage.setItem('user_id', JSON.stringify(response.data.user.id));
-      localStorage.setItem('token', response.data.token);
+      sessionStorage.setItem('user_id', JSON.stringify(response.data.user.id));
+      sessionStorage.setItem('token', response.data.token);
       console.log("it works")
       // window.location.href = '/userprofile.html';               // change later to redirect user to another page
     })
