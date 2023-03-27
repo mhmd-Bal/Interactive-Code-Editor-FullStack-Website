@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import "./styles.css";
+import axios from "axios";
+
 
 const LoginBlock = () => {
   const [email, setEmail] = useState('');
@@ -25,7 +27,23 @@ const LoginBlock = () => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-
+    axios.post('http://127.0.0.1:8000/api/v0.0.1/login', {
+      email: email,
+      password: password
+    }, {
+      headers: {
+        'content-type': 'application/json',
+        'Accept' : 'application/json',
+      }
+    })
+    .then(response => {
+      localStorage.setItem('user_id', JSON.stringify(response.data.user.id));
+      localStorage.setItem('token', response.data.token);
+      // window.location.href = '/userprofile.html';
+    })
+    .catch(error => {
+      console.log(error);
+    });
   };
 
   return (
@@ -34,27 +52,15 @@ const LoginBlock = () => {
       <form onSubmit={handleFormSubmit}>
         <div className="form-group">
           <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={email}
-            onChange={handleEmailChange}
-          />
+          <input type="email" id="email" name="email" value={email} onChange={handleEmailChange} autoComplete="off"/>
         </div>
         <div className="form-group">
           <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            value={password}
-            onChange={handlePasswordChange}
-          />
+          <input type="password" id="password" name="password" value={password} onChange={handlePasswordChange} autoComplete="off"/>
           {passwordError && <div className="error">{passwordError}</div>}
         </div>
         <button type="submit">Login</button>
-        <h3>Don't Have an Account? <a>Sign Up Here</a></h3>
+        <p>Don't Have an Account? <a>Sign Up Here</a></p>
       </form>
     </div>
   );
