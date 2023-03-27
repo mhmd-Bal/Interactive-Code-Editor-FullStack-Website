@@ -1,5 +1,8 @@
 import React , {useState, useEffect} from "react";
+import NavBar from '../../Components/NavBar';
+import Footer from "../../Components/Footer"
 import axios from 'axios';
+import "./style.css";
 
 function CodesPage() {
 
@@ -26,6 +29,7 @@ function CodesPage() {
 
   return (
     <div>
+      <NavBar/>
       <h1>My Codes</h1>
       {codes.map(code => (
         <div key={code.id}>
@@ -33,6 +37,7 @@ function CodesPage() {
           <pre>{code.content}</pre>
         </div>
       ))}
+      <Footer/>
     </div>
   );
 };
