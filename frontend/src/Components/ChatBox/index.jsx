@@ -39,24 +39,26 @@ const ChatBox = () => {
   };
 
   const send = () => {
-    setMessage([...message, value]);
+    if (!value == "") {
+      setMessage([...message, value]);
 
-    axios.post(
-      "http://localhost:8000/api/v0.0.1/chat/send_message",
-      {
-        receiver_id: user,
-        content: value,
-      },
-      {
-        headers: {
-          "content-type": "application/json",
-          Accept: "application/json",
-          Authorization: "bearer " + token,
+      axios.post(
+        "http://localhost:8000/api/v0.0.1/chat/send_message",
+        {
+          receiver_id: user,
+          content: value,
         },
-      }
-    );
+        {
+          headers: {
+            "content-type": "application/json",
+            Accept: "application/json",
+            Authorization: "bearer " + token,
+          },
+        }
+      );
 
-    setValue("");
+      setValue("");
+    }
   };
   return (
     <div className="box">
