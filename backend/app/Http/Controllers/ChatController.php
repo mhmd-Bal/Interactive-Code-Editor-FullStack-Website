@@ -23,7 +23,7 @@ class ChatController extends Controller
         $sender_id = Auth::id();
 
         $message = Chat::where("sender_id",$sender_id)
-        ->where("receiver_id",$request->receiver_id)->orWhere("receiver_id",$sender_id)->where("sender_id",$request->receiver_id)->orderBy('created_at', 'desc')->get();
+        ->where("receiver_id",$request->receiver_id)->orWhere("receiver_id",$sender_id)->where("sender_id",$request->receiver_id)->orderBy('created_at', 'asc')->get();
         return response()->json([
             "Message" => $message,
         ]);
