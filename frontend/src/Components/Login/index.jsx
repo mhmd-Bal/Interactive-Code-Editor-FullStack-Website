@@ -41,7 +41,9 @@ const LoginBlock = () => {
       .then(response => {
         localStorage.setItem('user_id', JSON.stringify(response.data.user.id));
         localStorage.setItem('token', response.data.authorisation.token);
-        console.log(localStorage.getItem('user_id'));
+        if (response.data.user.is_admin == 1) {
+          navigate("/admin");
+        }
         if (response.data.status == "success") {
           navigate("/");
         }
