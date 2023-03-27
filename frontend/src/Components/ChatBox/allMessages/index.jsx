@@ -13,8 +13,6 @@ const AllMessages = (props) => {
           return <div className="message to">{message.content}</div>;
         }
       })}
-      {/* <div className="message to">{message}</div> */}
-
       <Message messages={props.message} />
     </div>
   );
