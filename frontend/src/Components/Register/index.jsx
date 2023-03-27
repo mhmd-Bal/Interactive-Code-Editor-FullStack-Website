@@ -55,6 +55,10 @@ const RegisterBlock = () => {
         });
     };
 
+    const handleCancel = () => {
+        navigate("/");
+    };
+
     return (
         <div className="register-block">
             <h2>Register</h2>
@@ -73,6 +77,7 @@ const RegisterBlock = () => {
                     {passwordError && <div className="error">{passwordError}</div>}
                 </div>
                 <button type="submit">Register</button>
+                <button type="button" onClick={handleCancel}>Cancel</button>
             </form>
         </div>
     );
