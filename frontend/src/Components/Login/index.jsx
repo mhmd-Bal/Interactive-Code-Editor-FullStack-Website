@@ -34,7 +34,6 @@ const LoginBlock = () => {
       headers: {
         'content-type': 'application/json',
         'Accept' : 'application/json',
-        'Authorization': 'bearer ' + token
       }
     })
     .then(response => {

@@ -10,6 +10,7 @@
     margin-bottom: 5px;
   }
   
+  .register-block input[type="text"],
   .register-block input[type="email"],
   .register-block input[type="password"] {
     display: block;
