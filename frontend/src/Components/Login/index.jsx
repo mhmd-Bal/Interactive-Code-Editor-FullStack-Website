@@ -64,8 +64,8 @@ const LoginBlock = () => {
           <input type="password" id="password" name="password" value={password} onChange={handlePasswordChange} autoComplete="off" />
           {passwordError && <div className="error">{passwordError}</div>}
         </div>
-        <button type="submit">Login</button>
         <p>Don't Have an Account? <a>Sign Up Here</a></p>
+        <button type="submit">Login</button>
       </form>
     </div>
   );
