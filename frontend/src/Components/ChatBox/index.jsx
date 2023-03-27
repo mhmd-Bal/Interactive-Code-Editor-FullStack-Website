@@ -7,21 +7,23 @@ import AllMessages from "./allMessages";
 import axios from "axios";
 
 const ChatBox = () => {
-  const [messages, setMessages] = useState([]);
+  const [message, setMessage] = useState([]);
   const [value, setValue] = useState("");
 
-  const update = (e) => {
-    setValue(e.target.value);
+  const update = (event) => {
+    setValue(event.target.value);
   };
 
   const send = () => {
-    setMessages([...messages, value]);
+    setMessage([...message, value]);
+    console.log(message);
+    console.log(value);
     setValue("");
   };
   return (
     <div className="box">
       <NameBar />
-      <AllMessages messages={messages} />
+      <AllMessages message={message} />
       <Text value={value} update={update} send={send} />
     </div>
   );
