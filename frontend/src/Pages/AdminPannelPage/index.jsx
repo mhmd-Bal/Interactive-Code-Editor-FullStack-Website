@@ -2,6 +2,7 @@ import React , {useState, useEffect} from "react";
 import Header from  '../../Components/Admin/Header';
 import Sidebar from '../../Components/Admin/Sidebar';
 import axios from 'axios';
+import "./style.css";
 
 const AdminPage = () => {
     const [isOpen, setIsOpen] = useState(true);
