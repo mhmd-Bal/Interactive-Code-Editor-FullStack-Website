@@ -7,6 +7,7 @@ use App\Models\Favorite;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+// use App\Http\Controllers\Auth;
 class CodeController extends Controller
 {
     public function getCodes($id){
@@ -28,9 +29,9 @@ class CodeController extends Controller
         $content = $request->content;
         $user_id = $request->user_id;
     
-        $snippet = Code::where('user_id', $user_id)->where('name', $name);
+        $snippet = Code::where('user_id', $user_id)->where('name', $name)->first();
     
-        if ($snippet->count()>0) {
+        if ($snippet) {
             $snippet->content = $content;
             $snippet->save();
     
