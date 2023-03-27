@@ -31,12 +31,14 @@ function CodesPage() {
     <div>
       <NavBar/>
       <h1 className="center">My Codes</h1>
-      {codes.map(code => (
-        <div key={code.id}>
-          <h2>{code.name}</h2>
+      <div className="container">
+         {codes.map(code => (
+        <div key={code.id} className="box">
+          <h2 className="center">{code.name}</h2>
           <p>{code.content}</p>
         </div>
       ))}
+      </div>
       <Footer/>
     </div>
   );

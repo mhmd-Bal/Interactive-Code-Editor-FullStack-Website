@@ -2,3 +2,27 @@
     margin-top: 3%;
     text-align: center;
 }
+.container{
+    display:flex;
+    justify-content: space-around;
+
+}
+.box{
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    margin-left: 80px;
+    background-color: #fff;
+    border: 0.5px solid ;
+    box-shadow: 0 2px 4px var(--light_purple);
+    border-radius: 5px;
+    overflow-y: auto; 
+    overflow-x: auto;
+    width: 25%;
+    height: 400px;
+}
+.box p {
+    white-space: pre-wrap;
+    font-size: 14px;
+    padding: 10px; 
+}
