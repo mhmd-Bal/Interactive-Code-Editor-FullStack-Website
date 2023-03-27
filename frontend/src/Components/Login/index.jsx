@@ -51,6 +51,10 @@ const LoginBlock = () => {
       });
   };
 
+  const handleCancel = () => {
+    navigate("/");
+  };
+
   return (
     <div className="login-block">
       <h2>Login</h2>
@@ -66,6 +70,7 @@ const LoginBlock = () => {
         </div>
         <p>Don't Have an Account? <a>Sign Up Here</a></p>
         <button type="submit">Login</button>
+        <button type="button" onClick={handleCancel}>Cancel</button>
       </form>
     </div>
   );

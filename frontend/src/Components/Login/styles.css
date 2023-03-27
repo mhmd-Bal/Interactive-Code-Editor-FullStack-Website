@@ -35,7 +35,7 @@ body{
   }
   
   .login-block button[type="submit"] {
-    margin-left: 40%;
+    margin-left: 32%;
     background-color: dark_purple;
     color: white;
     border: none;
