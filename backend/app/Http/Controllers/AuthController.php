@@ -24,12 +24,14 @@ class AuthController extends Controller{
         }
     
         $user = Auth::user();
-        $response = [];
-        
-        $response["user"] = $user;
-        $response["token"] = $token;
-    
-        return response()->json($response);
+        return response()->json([
+            'status' => 'success',
+            'user' => $user,
+            'authorisation' => [
+                'token' => $token,
+                'type' => 'bearer',
+            ]
+        ]);
     }
 
     public function register(Request $request){
