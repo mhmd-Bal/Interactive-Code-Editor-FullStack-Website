@@ -1,14 +1,23 @@
 <?php
 
 namespace App\Http\Controllers;
-use GuzzleHttp\Client;
 use App\Models\Code;
+use GuzzleHttp\Client;
 use App\Models\Favorite;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Auth;
+use Illuminate\Support\Facades\Auth;
+
+// use App\Http\Controllers\Auth;
 class CodeController extends Controller
 {
     public function getCodes($id){
+        if($id == "current_user"){
+            $current_user_id = Auth::id();
+            $code = Code::where('user_id', $current_user_id)->get();
+            return response()->json([
+                'code' => $code
+            ]);
+        }
         $code=Code::where('id',$id)->get();
         return response()->json([
             'code'=> $code

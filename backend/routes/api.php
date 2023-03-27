@@ -28,10 +28,11 @@ Route::group(["prefix" => "v0.0.1"], function(){
                 Route::get('/get_saved/{id}',[CodeController:: class, "getSavedCodes"]);
                 Route::get('/{id}',[CodeController:: class, "getCodes"]);
 
-                Route::group(["prefix" => "chat"], function(){
-                    Route::post('/getChat',[ChatController:: class, "getMessage"]);
-                    Route::post('/sendMessage',[ChatController:: class, "sendMessage"]);
             });
+
+            Route::group(["prefix" => "chat"], function(){
+                Route::post('/get_chat',[ChatController:: class, "getMessage"]);
+                Route::post('/send_message',[ChatController:: class, "sendMessage"]);
             });
         });
 });
