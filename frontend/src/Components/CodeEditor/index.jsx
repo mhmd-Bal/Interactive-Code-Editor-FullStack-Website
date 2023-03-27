@@ -19,15 +19,16 @@ const CodeEditor = ({ setOutput }) => {
 
   const handleSaveClick = () => {
     console.log("Save clicked");
-    let headers= {'Authorization': 'Bearer ' + sessionStorage.getItem('token')};
+    let headers= {'Authorization': 'Bearer ' + localStorage.getItem('token')};
     axios.post('http://localhost:8000/api/v0.0.1/code/insert', {
       name: filename,
       content: content,
-      user_id: 1
+      user_id:localStorage.getItem('user_id'),
     },{ headers })
     .then(function (response) {
       alert(response.data.status);
       console.log(response.data.status);
+      console.log(localStorage.getItem('user_id'));
     })
     .catch(function (error) {
       console.error(error);
