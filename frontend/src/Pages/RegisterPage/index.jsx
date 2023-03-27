@@ -1,14 +1,14 @@
 import React from "react";
-import Login from "../../Components/Login";
+import Register from "../../Components/Register";
 import NavBar from "../../Components/NavBar";
 
-const LoginPage = () => {
+const RegisterPage = () => {
   return (
     <div>
       <NavBar />
-      <Login />
+      <Register />
     </div>
   );
 };
 
-export default LoginPage;
+export default RegisterPage;

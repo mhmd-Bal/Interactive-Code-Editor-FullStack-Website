@@ -1,21 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import AppButton from "../Button";
-import axios from "axios";
 import "./styles.css";
 
-const Compiler = () => {
-  const [filename, setFilename] = useState("Shell");
-  const [output, setOutput] = useState("Compiler Output");
-
-  const handleClearClick = () => {
-    setOutput("");
-  };
-
+const Compiler = ({ output, handleClearClick }) => {
   return (
     <div className="compiler-block">
       <div className="compiler-panel">
         <div className="compiler-filename">
-          <p>{filename}</p>
+          <p>Console</p>
         </div>
         <div className="compiler-controls">
           <AppButton button_name="Clear" onClick={handleClearClick} />
@@ -29,3 +21,4 @@ const Compiler = () => {
 };
 
 export default Compiler;
+
