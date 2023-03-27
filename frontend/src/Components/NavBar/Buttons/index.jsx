@@ -51,8 +51,8 @@ function NavButtons() {
         <AppButton button_name="Signup" onClick={handleNavigateToRegister} />
       </div>
       <div className={token ? "buttonHolder" : "disabled"}>
-        <AppButton button_name="Browse Users"  onClick={handleNavigateToBrowseUsers} />
-        <AppButton button_name="Start Coding" onClick={handleNavigateToCompileCode} />
+        <AppButton button_name="Browse"  onClick={handleNavigateToBrowseUsers} />
+        <AppButton button_name="Compile" onClick={handleNavigateToCompileCode} />
         <AppButton button_name="Logout" onClick={handleLogout} />
       </div>
 
