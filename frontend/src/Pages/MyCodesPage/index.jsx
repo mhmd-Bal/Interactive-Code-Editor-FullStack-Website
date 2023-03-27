@@ -19,7 +19,7 @@ function CodesPage() {
   useEffect(() => {
     axios.request(getLoggedInUserCodes)
         .then(response => {
-            setCodes(response.data.codes);
+            setCodes(response.data.code);
             console.log(response);
         })
   },[]);
