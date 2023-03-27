@@ -30,11 +30,11 @@ function CodesPage() {
   return (
     <div>
       <NavBar/>
-      <h1>My Codes</h1>
+      <h1 className="center">My Codes</h1>
       {codes.map(code => (
         <div key={code.id}>
-          <h3>{code.name}</h3>
-          <pre>{code.content}</pre>
+          <h2>{code.name}</h2>
+          <p>{code.content}</p>
         </div>
       ))}
       <Footer/>
