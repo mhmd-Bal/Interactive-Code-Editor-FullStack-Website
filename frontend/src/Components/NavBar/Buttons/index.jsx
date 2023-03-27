@@ -55,8 +55,9 @@ function NavButtons() {
         <AppButton button_name="Compile" onClick={handleNavigateToCompileCode} />
         <AppButton button_name="Logout" onClick={handleLogout} />
       </div>
+      
+      <img className={token ? "profile" : "disabled"} src={"randomPic.webp"} alt="" />
 
-      <img className="profile" src={"Profile.svg"} alt="" />
     </div>
   );
 }

@@ -70,7 +70,7 @@ const BrowseUsersPage = () => {
       </div>
       <div className="list-of-users">
         {users.map((user) => (
-          <User profile_picture={ user.profile_picture} username={user.username} email={user.email} id={user.id} />
+          <User profile_picture={user.profile_picture} username={user.username} email={user.email} id={user.id} />
         ))}
       </div>
       <Footer />

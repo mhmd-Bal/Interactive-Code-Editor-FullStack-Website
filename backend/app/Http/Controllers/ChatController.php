@@ -9,8 +9,10 @@ use Illuminate\Support\Facades\Auth;
 class ChatController extends Controller
 {
     public function sendMessage(Request $request){
+        $sender_id = Auth::id();
+
         $message = Chat::create([
-            'sender_id' => $request->sender_id,
+            'sender_id' => $sender_id,
             'receiver_id' => $request->receiver_id,
             'content' => $request->content,
         ]);

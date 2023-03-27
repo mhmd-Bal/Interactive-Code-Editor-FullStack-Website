@@ -4,11 +4,17 @@ import Message from "./Messages/Message";
 import "../../../index.css";
 
 const AllMessages = (props) => {
-  console.log(props.message);
+  console.log(props.r_id);
   return (
     <div className="inbox">
-      <div className="message from">Hii</div>
-
+      {props.oldMessages.map((message) => {
+        console.log(message.receiver_id);
+        if (message.receiver_id != props.r_id) {
+          return <div className="message from">{message.content}</div>;
+        } else {
+          return <div className="message to">{message.content}</div>;
+        }
+      })}
       <Message messages={props.message} />
     </div>
   );

@@ -8,10 +8,12 @@ import axios from "axios";
 
 const ChatBox = () => {
   const [message, setMessage] = useState([]);
+  const [oldMessages, setOldMessages] = useState([]);
+
   const [value, setValue] = useState("");
-  const user = localStorage.getItem("");
+  const user = localStorage.getItem("receiver_id");
   const token = localStorage.getItem("token");
-  
+
   useEffect(() => {
     axios
       .post(
@@ -28,7 +30,8 @@ const ChatBox = () => {
         }
       )
       .then((res) => {
-        console.log(res);
+        console.log(res.data.Message);
+        setOldMessages(res.data.Message);
       });
   }, []);
   const update = (event) => {
@@ -36,15 +39,31 @@ const ChatBox = () => {
   };
 
   const send = () => {
-    setMessage([...message, value]);
-    console.log(message);
-    console.log(value);
-    setValue("");
+    if (!value == "") {
+      setMessage([...message, value]);
+
+      axios.post(
+        "http://localhost:8000/api/v0.0.1/chat/send_message",
+        {
+          receiver_id: user,
+          content: value,
+        },
+        {
+          headers: {
+            "content-type": "application/json",
+            Accept: "application/json",
+            Authorization: "bearer " + token,
+          },
+        }
+      );
+
+      setValue("");
+    }
   };
   return (
     <div className="box">
       <NameBar />
-      <AllMessages message={message} />
+      <AllMessages r_id={user} oldMessages={oldMessages} message={message} />
       <Text value={value} update={update} send={send} />
     </div>
   );
