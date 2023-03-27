@@ -4,7 +4,7 @@ import axios from "axios";
 import "./styles.css";
 
 const CodeEditor = ({ setOutput }) => {
-  const [filename, setFilename] = useState("Name of File.py");
+  const [filename, setFilename] = useState("YourFileName");
   const [content, setContent] = useState("print('Hello World!')");
 
   const handleDownloadClick = () => {
@@ -20,18 +20,17 @@ const CodeEditor = ({ setOutput }) => {
   const handleSaveClick = () => {
     console.log("Save clicked");
     let headers= {'Authorization': 'Bearer ' + sessionStorage.getItem('token')};
-    axios.post('localhost:8000/api/v0.0.1/code/insert', {
+    axios.post('http://localhost:8000/api/v0.0.1/code/insert', {
       name: filename,
       content: content,
       user_id: 1
-    })
+    },{ headers })
     .then(function (response) {
-      alert("saved");
+      alert(response.data.status);
       console.log(response.data.status);
     })
     .catch(function (error) {
       console.error(error);
-     alert("not saved");
     });
   };
 
@@ -54,7 +53,7 @@ const CodeEditor = ({ setOutput }) => {
     axios.request(options)
       .then(function (response) {
         console.log(response.data.Result);
-        setOutput(response.data.Result);
+        response.data.Result===null?setOutput('Code Contains Error, Please Fix Code Syntax'):setOutput(response.data.Result)
       })
       .catch(function (error) {
         console.error(error);

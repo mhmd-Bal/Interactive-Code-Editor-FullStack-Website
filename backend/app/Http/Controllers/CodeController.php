@@ -15,28 +15,33 @@ class CodeController extends Controller
         ]);
     }
 
-    public function insertCode(Request $request){
-        $name=$request->name;
-        $content=$request->content;
-        $user_id=$request->user_id;
-        $check=Code::where('user_id',$user_id)->where('name',$name)->get();
-
-        if($check->count()==0){
-            $save=Code::create([
-                'name'=>$name,
-                'content'=>$content,
-                'user_id'=>$user_id,
-            ]);
+    public function insertCode(Request $request) {
+        $name = $request->name;
+        $content = $request->content;
+        $user_id = $request->user_id;
+    
+        $snippet = Code::where('user_id', $user_id)->where('name', $name);
+    
+        if ($snippet->count()>0) {
+            $snippet->content = $content;
+            $snippet->save();
+    
             return response()->json([
-                'status'=>'Saved'
+                'status' => 'Snippet Updated'
             ]);
-        }
-        else{
+        } else {
+            $newSnippet = Code::create([
+                'name' => $name,
+                'content' => $content,
+                'user_id' => $user_id,
+            ]);
+    
             return response()->json([
-                'status'=>'Name of the file is already picked, choose another one'
+                'status' => 'Snippet Created'
             ]);
         }
     }
+    
 
     public function saveCode(Request $request){
         $code_id=$request->code_id;
