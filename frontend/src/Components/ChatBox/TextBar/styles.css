@@ -1,5 +1,5 @@
 .textBox {
-  background-color: rgb(199, 0, 57);
+  background-color: #66004d;
   height: 15vh;
   padding: 30px;
   display: flex;
@@ -8,7 +8,7 @@
 }
 
 .submit {
-  background-color: rgb(255, 195, 15);
+  background-color: #180047;
   width: 5%;
   height: 80%;
   padding: 10px;
@@ -20,7 +20,7 @@
 
 input {
   width: 70%;
-  height: 80%;
+  height: 100%;
   padding: 10px;
   border-radius: 20px;
 }

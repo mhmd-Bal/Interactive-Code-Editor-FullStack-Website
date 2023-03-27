@@ -27,7 +27,7 @@ const LoginBlock = () => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://127.0.0.1:8000/api/v0.0.1/login', {
+    axios.post('http://localhost:8000/api/v0.0.1/login', {
       email: email,
       password: password
     }, {
@@ -37,7 +37,12 @@ const LoginBlock = () => {
       }
     })
     .then(response => {
-        //TO ADD THE DIRECTORY CHANGE
+      localStorage.setItem('user_id', JSON.stringify(response.data.user.id));
+      localStorage.setItem('token', response.data.token);
+      console.log("it works");
+      // console.log(JSON.stringify(response.data.user.id));
+      console.log(localStorage.getItem('user_id'));
+      // window.location.href = '/userprofile.html';               // change later to redirect user to another page
     })
     .catch(error => {
       console.log(error);
@@ -50,11 +55,11 @@ const LoginBlock = () => {
       <form onSubmit={handleFormSubmit}>
         <div className="form-group">
           <label htmlFor="email">Email:</label>
-          <input type="email" id="email" name="email" value={email} onChange={handleEmailChange} />
+          <input type="email" id="email" name="email" value={email} onChange={handleEmailChange} autoComplete="off"/>
         </div>
         <div className="form-group">
           <label htmlFor="password">Password:</label>
-          <input type="password" id="password" name="password" value={password} onChange={handlePasswordChange} />
+          <input type="password" id="password" name="password" value={password} onChange={handlePasswordChange} autoComplete="off"/>
           {passwordError && <div className="error">{passwordError}</div>}
         </div>
         <button type="submit">Login</button>

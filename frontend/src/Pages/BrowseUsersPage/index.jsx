@@ -14,7 +14,7 @@ const BrowseUsersPage = () => {
   const [users, setUsers] = useState([]);
   const [value, setValue] = useState('');
 
-  const token = sessionStorage.getItem("token");
+  const token = localStorage.getItem("token");
 
   const getUsers = {
     method: 'GET',

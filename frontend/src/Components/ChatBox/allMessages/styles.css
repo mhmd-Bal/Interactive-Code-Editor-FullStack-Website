@@ -1,5 +1,5 @@
 .to {
-  background-color: rgb(84, 24, 69);
+  background-color: #660066;
   color: aliceblue;
   display: flex;
   align-self: self-end;
@@ -15,8 +15,9 @@
   padding: 10px;
   font-size: x-large;
 }
+
 .from {
-  background-color: rgb(255, 195, 15);
+  background-color: #180047;
 }
 
 .inbox {
