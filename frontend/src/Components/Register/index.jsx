@@ -65,15 +65,15 @@ const RegisterBlock = () => {
             <form onSubmit={handleFormSubmit}>
                 <div className="form-group">
                     <label htmlFor="username">Username:</label>
-                    <input type="text" id="username" name="username" value={username} onChange={handleUsernameChange} required autoComplete="off"/>
+                    <input type="text" id="username" name="username" value={username} onChange={handleUsernameChange} required/>
                 </div>
                 <div className="form-group">
                     <label htmlFor="email">Email:</label>
-                    <input type="email" id="email" name="email" value={email} onChange={handleEmailChange} required autoComplete="off"/>
+                    <input type="email" id="email" name="email" value={email} onChange={handleEmailChange} required/>
                 </div>
                 <div className="form-group">
                     <label htmlFor="password">Password:</label>
-                    <input type="password" id="password" name="password" value={password} onChange={handlePasswordChange} required autoComplete="off"/>
+                    <input type="password" id="password" name="password" value={password} onChange={handlePasswordChange} required/>
                     {passwordError && <div className="error">{passwordError}</div>}
                 </div>
                 <button type="submit">Register</button>
