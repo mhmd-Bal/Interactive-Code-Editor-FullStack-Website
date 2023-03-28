@@ -1,11 +1,11 @@
 import React from 'react';
 import "./style.css";
 
-const Sidebar = ({ isOpen, toggle }) => {
+const Sidebar = ({ isOpen}) => {
     return (
         <aside className={`sidebar ${isOpen ? 'show-sidebar' : ''}`}>
             <div className='sidebar-links'>
-            <a href='#' className="link">View Users</a>
+            <a href='#' className="link" >View Users</a>
             </div>
         </aside>
     );

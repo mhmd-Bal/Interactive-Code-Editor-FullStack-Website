@@ -3,7 +3,7 @@
   justify-content: start;
   gap:36%;
   align-items: center;
-  background-color: #66004d;
+  background-color: var(--light_purple);
   color: white;
   padding: 1.5rem;
 }
