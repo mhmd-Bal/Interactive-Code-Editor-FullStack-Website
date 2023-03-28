@@ -9,8 +9,8 @@ import axios from "axios";
 
 const ChatBox = () => {
   const [message, setMessage] = useState([]);
-  const [old_messages, setOldMessages] = useState([]);
-  const [reseiver_name, setReseiverName] = useState("");
+  const [oldMessages, setOldMessages] = useState([]);
+
   const [value, setValue] = useState("");
   const user = localStorage.getItem("receiver_id");
   const token = localStorage.getItem("token");
@@ -37,19 +37,8 @@ const ChatBox = () => {
         }
       )
       .then((res) => {
+        console.log(res.data.Message);
         setOldMessages(res.data.Message);
-      });
-
-    axios
-      .get(`http://localhost:8000/api/v0.0.1/receiver/${user}`, {
-        headers: {
-          "content-type": "application/json",
-          Accept: "application/json",
-          Authorization: "Bearer " + token,
-        },
-      })
-      .then((res) => {
-        setReseiverName(res.data.receiver);
       });
   }, []);
   const update = (event) => {
@@ -80,8 +69,8 @@ const ChatBox = () => {
   };
   return (
     <div className="box">
-      <NameBar reseiver_name={reseiver_name} back={back} />
-      <AllMessages r_id={user} old_messages={old_messages} message={message} />
+      <NameBar back={back} />
+      <AllMessages r_id={user} oldMessages={oldMessages} message={message} />
       <Text value={value} update={update} send={send} />
     </div>
   );

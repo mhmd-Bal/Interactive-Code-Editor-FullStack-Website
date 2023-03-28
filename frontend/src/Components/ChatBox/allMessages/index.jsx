@@ -6,7 +6,7 @@ import "../../../index.css";
 const AllMessages = (props) => {
   return (
     <div className="inbox">
-      {props.old_messages.map((message) => {
+      {props.oldMessages.map((message) => {
         if (message.receiver_id != props.r_id) {
           return <div className="message from">{message.content}</div>;
         } else {

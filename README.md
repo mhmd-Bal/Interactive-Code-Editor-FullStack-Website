@@ -7,19 +7,17 @@ Mohamad al-agha</br>
 Mirvat Barakt</br>
 Fadi Haddad</br></br>
 <h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://www.figma.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/> </a> <a href="https://laravel.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-plain-wordmark.svg" alt="laravel" width="40" height="40"/> </a> <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> </p></br>
+<p align="left"> <a href="https://www.figma.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/> </a> <a href="https://laravel.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-plain-wordmark.svg" alt="laravel" width="40" height="40"/> </a> <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> </p>
 Color Palette : we used adobe platform to come up with out color palette.</br></br>
-<a href="https://ibb.co/0qRnCtR"><img src="https://i.ibb.co/qB3DN53/palette.png" alt="palette" border="0"></a></br>
-
+<a href="https://ibb.co/0qRnCtR"><img src="https://i.ibb.co/qB3DN53/palette.png" alt="palette" border="0"></a>
 # User Stories :</br>
-
 ### 1-As a User, I want to navigate the home page so that I can quickly and easily find the specific information or feature that I am looking for.</br>
 ### 2-As a User, I want to sign up so that I can have an account on the website to save my code snippets.<br>
 ### 3-As a User, I want to login so that I can go back to my user profile and codes</br>
 ### 4-As a User, I want to compile and run Python code without having to install python on my local machine.</br>
 ### 5-As a User, I want to be able to save my code on the website for later</br>
 ### 6-As a User, I want to download the code that I wrote so that I can use it in my projects</br>
-### 7-As a User, I want to be able to search for other developers so that I can view their code</br>
+### 7-As a User, I want to be able to search for other developers so that I can view their code
 ### 8-As a User, I want to able to chat with other developers so that I can ask them questions, answer their questions and get to know them</br>
 ### 9-As an Admin, I want to display all the users so that I can see who's joining my website</br>
 

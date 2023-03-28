@@ -1,5 +1,9 @@
-body{
-  background-color: white;
+
+*{
+  background-image: none;
+}
+.body{
+  background-image: none;
 }
 .users-table {
     margin-top: 5%;
