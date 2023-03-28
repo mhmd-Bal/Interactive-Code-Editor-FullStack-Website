@@ -1,13 +1,31 @@
 .navbar {
-    display: flex;
-    justify-content:start;
-    gap: 40%;
-    align-items: center;
-    background-color: black;
-    color: white;
-    padding: 1rem;
-  }
+  display: flex;
+  justify-content: start;
+  gap:36%;
+  align-items: center;
+  background-color: var(--light_purple);
+  color: white;
+  padding: 1.5rem;
+}
+
 .nav-icon {
-    font-size: 2rem;
-    cursor: pointer;
-  }
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.buttons {
+  border-radius: 20px;
+  background-image: linear-gradient(90deg, rgb(66, 232, 255), rgb(151, 0, 154));
+  color: aliceblue;
+  width: 30%;
+  height: 80%;
+  padding: 10px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button::after {
+  transform: scale(0.9);
+}

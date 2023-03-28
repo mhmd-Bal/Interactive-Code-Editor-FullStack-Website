@@ -31,7 +31,7 @@ const AdminPage = () => {
       setIsOpen(!isOpen);
     };
     return (
-        <>
+      <div className="body">
           <Header toggle={toggle} />
           <Sidebar isOpen={isOpen} toggle={toggle} />
           <div className="users-table">
@@ -56,7 +56,7 @@ const AdminPage = () => {
               </tbody>
             </table>
           </div>
-        </>
+          </div>
       );
 
 };
