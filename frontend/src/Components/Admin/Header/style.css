@@ -3,9 +3,9 @@
   justify-content: start;
   gap:37%;
   align-items: center;
-  background-color: black;
+  background-color: #66004d;
   color: white;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
 .nav-icon {
