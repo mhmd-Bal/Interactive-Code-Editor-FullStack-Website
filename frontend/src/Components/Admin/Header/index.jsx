@@ -35,7 +35,7 @@ const Header = ({ toggle }) => {
         <div className='nav-icon' onClick={toggle}>
           <FaBars />
         </div>
-        <div ><h2>Admin Pannel</h2></div>
+        <div ><h1>Admin Pannel</h1></div>
         <AppButton button_name="Logout" onClick={handleLogout} />
       </nav>
     </header>

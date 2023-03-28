@@ -1,7 +1,7 @@
 .navbar {
   display: flex;
   justify-content: start;
-  gap:37%;
+  gap:36%;
   align-items: center;
   background-color: #66004d;
   color: white;
