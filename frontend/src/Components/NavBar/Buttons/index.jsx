@@ -26,6 +26,10 @@ function NavButtons() {
     navigate("/browse_users");
   }
 
+  const handleNavigateToMyCodes = () => {
+    navigate("/my_codes");
+  }
+
   const handleLogout = () => {
     localStorage.clear();
     
@@ -57,7 +61,7 @@ function NavButtons() {
         <AppButton button_name="Logout" onClick={handleLogout} />
       </div>
       
-      <img className={token ? "profile" : "disabled"} src={"log.jpg"} alt="" />
+      <img className={token ? "profile" : "disabled"} src={"log.jpg"} alt="" onClick={handleNavigateToMyCodes}/>
       {/* <img className={token ? "profile" : "disabled"} src={"randomPic.webp"} alt="" /> */}
 
     </div>
