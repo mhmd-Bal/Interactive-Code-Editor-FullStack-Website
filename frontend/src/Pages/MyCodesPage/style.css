@@ -2,7 +2,9 @@
     margin-top: 3%;
     margin-bottom: 3%;
     text-align: center;
-}
+    color: #660066;
+} 
+
 .container{
     display:flex;
     justify-content: space-around;
@@ -25,6 +27,6 @@
 }
 .box1 pre {
     white-space: pre-wrap;
-    font-size: 14px;
+    font-size: 18px;
     padding: 10px; 
 }
