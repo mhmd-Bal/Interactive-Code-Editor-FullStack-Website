@@ -19,6 +19,7 @@ Route::group(["prefix" => "v0.0.1"], function(){
         Route::group(["middleware" => ["auth:api"]], function(){
             
             Route::get('/users', [UserController::class, 'getUsers']);
+            Route::get('/receiver/{id}', [UserController::class, 'getReceiver']);
             Route::get('/users/search', [UserController::class, 'search']);
 
             Route::group(["prefix" => "code",], function(){

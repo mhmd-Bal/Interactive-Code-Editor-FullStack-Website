@@ -16,6 +16,15 @@ class UserController extends Controller
             'users' => $users
         ]);
     }
+
+    public function getReceiver($id){
+        $receiver=User::select("username")->find($id);
+
+        return response()->json([
+            'receiver'=>$receiver->username
+        ]);
+    }
+
     public function search(Request $request)
     {
     $query = $request->input('search_input');
