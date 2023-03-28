@@ -1,5 +1,4 @@
 # Full Stack Code Editor Website</br>
-<<<<<<< HEAD
 # This website is a team project, made to show the team members design and programming skills in front end (React) and backend (Laravel).<br>
 # Team Members:</br>
 Mohamad Balouza</br>
