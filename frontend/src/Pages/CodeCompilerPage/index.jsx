@@ -3,6 +3,7 @@ import CodeEditor from "../../Components/CodeEditor";
 import Compiler from "../../Components/Compiler";
 import NavBar from "../../Components/NavBar";
 import "./styles.css";
+import Footer from "../../Components/Footer"
 
 const CodeCompilerPage = () => {
   const [output, setOutput] = useState("Compiler Output");
@@ -19,6 +20,7 @@ const CodeCompilerPage = () => {
         <CodeEditor setOutput={setOutput} />
         <Compiler output={output} handleClearClick={handleClearClick} />
       </div>
+      <Footer />
     </div>
   );
 };

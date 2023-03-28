@@ -3,6 +3,7 @@ import NameBar from "./NameBar";
 import Text from "./TextBar";
 import "./styles.css";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import AllMessages from "./allMessages";
 import axios from "axios";
 
@@ -13,6 +14,12 @@ const ChatBox = () => {
   const [value, setValue] = useState("");
   const user = localStorage.getItem("receiver_id");
   const token = localStorage.getItem("token");
+
+  const navigate = useNavigate();
+
+  const back = () => {
+    navigate("/browse_users");
+  };
 
   useEffect(() => {
     axios
@@ -62,7 +69,7 @@ const ChatBox = () => {
   };
   return (
     <div className="box">
-      <NameBar />
+      <NameBar back={back} />
       <AllMessages r_id={user} oldMessages={oldMessages} message={message} />
       <Text value={value} update={update} send={send} />
     </div>

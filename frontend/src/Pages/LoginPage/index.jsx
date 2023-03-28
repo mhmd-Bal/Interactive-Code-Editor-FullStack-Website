@@ -1,6 +1,8 @@
 import React from "react";
 import Login from "../../Components/Login";
 import NavBar from "../../Components/NavBar";
+import Footer from "../../Components/Footer"
+
 
 const LoginPage = () => {
   localStorage.setItem("current_page", "login");
@@ -9,6 +11,7 @@ const LoginPage = () => {
     <div>
       <NavBar />
       <Login />
+      <Footer />
     </div>
   );
 };
