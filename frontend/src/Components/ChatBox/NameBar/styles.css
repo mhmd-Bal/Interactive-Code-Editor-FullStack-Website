@@ -21,8 +21,14 @@
 }
 
 .back {
-  height: 45%;
-  width: 4%;
+  background-color: #180047;
+  width: 5%;
+  height: 40%;
+  padding: 10px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .user {
