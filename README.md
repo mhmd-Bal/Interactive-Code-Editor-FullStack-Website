@@ -7,9 +7,9 @@ Mohamad al-agha</br>
 Mirvat Barakt</br>
 Fadi Haddad</br></br>
 <h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://www.figma.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/> </a> <a href="https://laravel.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-plain-wordmark.svg" alt="laravel" width="40" height="40"/> </a> <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> </p>
+<p align="left"> <a href="https://www.figma.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/> </a> <a href="https://laravel.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-plain-wordmark.svg" alt="laravel" width="40" height="40"/> </a> <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> </p></br></br>
 Color Palette : we used adobe platform to come up with out color palette.</br></br>
-<a href="https://ibb.co/0qRnCtR"><img src="https://i.ibb.co/qB3DN53/palette.png" alt="palette" border="0"></a>
+<a href="https://ibb.co/0qRnCtR"><img src="https://i.ibb.co/qB3DN53/palette.png" alt="palette" border="0"></a></br>
 # User Stories :</br>
 ### 1-As a User, I want to navigate the home page so that I can quickly and easily find the specific information or feature that I am looking for.</br>
 ### 2-As a User, I want to sign up so that I can have an account on the website to save my code snippets.<br>
