@@ -53,7 +53,7 @@ const LoginBlock = (props) => {
         }
       })
       .catch(error => {
-        console.log(error);
+        alert("Incorrect Crendetials!");
       });
   };
 

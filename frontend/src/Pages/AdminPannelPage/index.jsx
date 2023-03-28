@@ -3,11 +3,13 @@ import Header from  '../../Components/Admin/Header';
 import Sidebar from '../../Components/Admin/Sidebar';
 import axios from 'axios';
 import "./style.css";
+import { useNavigate } from "react-router-dom";
 
 const AdminPage = () => {
     const [isOpen, setIsOpen] = useState(true);
     const [users, setUsers] = useState([]);
     const token = localStorage.getItem("token");
+    const navigate = useNavigate();
 
     const getUsers = {
       method: 'GET',
@@ -25,6 +27,9 @@ const AdminPage = () => {
               setUsers(response.data.users);
               console.log(response);
           })
+          .catch(function (error) {
+            navigate("/");
+          });
     },[]);
 
     const toggle = () => {
