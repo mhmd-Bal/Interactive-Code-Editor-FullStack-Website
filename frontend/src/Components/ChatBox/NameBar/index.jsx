@@ -3,7 +3,9 @@ import "./styles.css";
 const NameBar = ({ back, reseiver_name }) => {
   return (
     <div className="nameBar">
-      <button onClick={back}>Back</button>
+      <button className="back" onClick={back}>
+        Back
+      </button>
       <div className="user">
         <img className="pic" src={"randomPic.webp"} alt="" />
         <div className="userName">{reseiver_name}</div>
